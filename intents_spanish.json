@@ -1,14 +1,81 @@
 {
-
-"intents": [
-
-    {
+    "intents": [
+      {
         "tag": "saludo",
-        "patterns": ["Hola", "Buenos días", "Buenas tardes"],
-        "responses": ["!Hola¡ ¿Cómo puedo ayudarte hoy?", "!Buenas¡ ¿Qué necesitas?"]
-    },
-
-    {}
-]
-
-}
+        "patterns": [
+          "Hola",
+          "Buenas",
+          "Hola, ¿me ayudas?",
+          "¿Hay alguien ahí?",
+          "Hola, soporte"
+        ],
+        "responses": [
+          "Hola, ¿en qué puedo ayudarte?",
+          "¡Hola! ¿Cómo te puedo ayudar hoy?",
+          "Hola, ¿qué problema técnico tienes?",
+          "¡Bienvenido al soporte! ¿Cuál es el inconveniente que estás experimentando?"
+        ]
+      },
+      {
+        "tag": "problema_conexion",
+        "patterns": [
+          "No tengo conexión",
+          "No puedo conectarme",
+          "Hay problemas de conexión",
+          "¿Por qué no tengo internet?",
+          "La conexión está lenta"
+        ],
+        "responses": [
+          "Lamento que tengas problemas de conexión. Primero, intenta reiniciar tu enrutador.",
+          "Por favor, asegúrate de que tu dispositivo esté conectado a la red Wi-Fi y prueba reiniciarlo.",
+          "Intenta desconectar y volver a conectar tu dispositivo a la red. Si el problema persiste, contáctanos de nuevo."
+        ]
+      },
+      {
+        "tag": "recuperar_contraseña",
+        "patterns": [
+          "Olvidé mi contraseña",
+          "No puedo acceder a mi cuenta",
+          "Necesito recuperar mi contraseña",
+          "¿Cómo restablezco mi contraseña?",
+          "Ayuda con la contraseña"
+        ],
+        "responses": [
+          "Puedes restablecer tu contraseña haciendo clic en 'Olvidé mi contraseña' en la página de inicio de sesión.",
+          "Para recuperar tu contraseña, ve a la sección de inicio de sesión y selecciona '¿Olvidaste tu contraseña?'. Te enviaremos un enlace a tu correo.",
+          "Intenta acceder a 'Olvidé mi contraseña' y sigue las instrucciones para restablecerla."
+        ]
+      },
+      {
+        "tag": "facturacion",
+        "patterns": [
+          "Quiero revisar mi factura",
+          "¿Dónde veo mis pagos?",
+          "Tengo una pregunta sobre la facturación",
+          "Información de pago",
+          "No entiendo mi factura"
+        ],
+        "responses": [
+          "Puedes ver tus facturas y pagos en la sección de 'Facturación' en tu cuenta.",
+          "Para acceder a tu historial de facturación, entra en tu perfil y selecciona 'Facturación'.",
+          "Revisa todos tus pagos y facturas en la sección de 'Mi cuenta' > 'Facturación'. ¿Te ayudo con algo más?"
+        ]
+      },
+      {
+        "tag": "despedida",
+        "patterns": [
+          "Gracias",
+          "Eso es todo",
+          "Adiós",
+          "Hasta luego",
+          "Muchas gracias por la ayuda"
+        ],
+        "responses": [
+          "¡De nada! Si necesitas más ayuda, aquí estaré.",
+          "Fue un placer ayudarte. ¡Que tengas un buen día!",
+          "Gracias por contactarnos. ¡Hasta luego!",
+          "¡Hasta pronto! No dudes en volver si tienes más preguntas."
+        ]
+      }
+    ]
+  }
