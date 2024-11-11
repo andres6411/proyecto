@@ -1,5 +1,7 @@
-import nitk
-from nitk.sten import WordNetLemmatizer
+import nltk
+nltk.download('punkt_tab')
+nltk.download('wordnet')
+from nltk.stem import WordNetLemmatizer
 import json
 import pickle
 import numpy as np
@@ -8,12 +10,12 @@ from keras.layers import Dense, Dropout
 from keras.optimizers import SGD
 from keras.optimizers.schedules import ExponentialDecay
 import random
-data_file_open('intents spanish.json', 'r', encoding="utf-8").read()
+data_file = open('intents_spanish.json', 'r', encoding="utf-8").read()
 intents = json.loads(data_file)
 
 lemmatizer = WordNetLemmatizer()
 
-words-[]
+words = []
 classes = []
 documents = []
 ignore_words = ['?', '!']
@@ -61,6 +63,7 @@ random.shuffle(training)
 
 # Divide el conjunto de entrenamiento en características (train_x) y etiquetas (train_y)
 train_x = [row[0] for row in training]
+train_y = [row[1] for row in training]
 
 train_x = np.array(train_x)
 train_y = np.array(train_y)
