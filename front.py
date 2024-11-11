@@ -1,4 +1,5 @@
 import streamlit as st
+from chatbot import predict_class, get_response, intents
 
 st.title(" Asistente virtual")
 
