@@ -1,7 +1,7 @@
 import streamlit as st
 from chatbot import predict_class, get_response, intents
 
-st.title(" Asistente virtual")
+st.title("Asistente virtual")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -21,6 +21,7 @@ if st.session_state.first_message:
 
 
 if prompt := st.chat_input("¿cómo puedo ayudarte?"):
+
     with st.chat_message("user"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -28,6 +29,6 @@ if prompt := st.chat_input("¿cómo puedo ayudarte?"):
     insts= predict_class(prompt)
     res= get_response(insts,intents)
 
-    with st.chat_message("assistent"):
-        st.markdown(prompt)
-    st. session_state.messages.append({"role": "assistent", "content": prompt})
+    with st.chat_message("assistant"):
+        st.markdown(res)
+    st.session_state.messages.append({"role": "assistant", "content": res})
