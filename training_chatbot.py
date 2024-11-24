@@ -88,6 +88,6 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 hist = model.fit(np.array (train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 
 # Guarda el modelo entrenado en un archivo h5
-model.save('chatbot_model.h5f', hist)
+model.save('chatbot_model.h5', hist)
 
 print("model created")

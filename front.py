@@ -25,7 +25,9 @@ if prompt := st.chat_input("¿cómo puedo ayudarte?"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
+    insts= predict_class(prompt)
+    res= get_response(insts,intents)
+
     with st.chat_message("assistent"):
         st.markdown(prompt)
-
     st. session_state.messages.append({"role": "assistent", "content": prompt})
