@@ -36,7 +36,7 @@ for intent in intents['intents']:
 # Lematiza las palabras y las convierte en minúsculas, excluyendo las palabras ignoradas
 words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words]
 words = sorted(list(set(words)))
-classes = sorted (list(set(classes)))
+classes = sorted(list(set(classes)))
 
 # Guarda las listas de palabras y clases en archivos pickle 
 pickle.dump(words,open('words.pkl','wb'))

@@ -1,81 +1,142 @@
 {
     "intents": [
-      {
-        "tag": "saludo",
-        "patterns": [
-          "Hola",
-          "Buenas",
-          "Hola, ¿me ayudas?",
-          "¿Hay alguien ahí?",
-          "Hola, soporte"
-        ],
-        "responses": [
-          "Hola, ¿en qué puedo ayudarte?",
-          "¡Hola! ¿Cómo te puedo ayudar hoy?",
-          "Hola, ¿qué problema técnico tienes?",
-          "¡Bienvenido al soporte! ¿Cuál es el inconveniente que estás experimentando?"
-        ]
-      },
-      {
-        "tag": "problema_conexion",
-        "patterns": [
-          "No tengo conexión",
-          "No puedo conectarme",
-          "Hay problemas de conexión",
-          "¿Por qué no tengo internet?",
-          "La conexión está lenta"
-        ],
-        "responses": [
-          "Lamento que tengas problemas de conexión. Primero, intenta reiniciar tu enrutador.",
-          "Por favor, asegúrate de que tu dispositivo esté conectado a la red Wi-Fi y prueba reiniciarlo.",
-          "Intenta desconectar y volver a conectar tu dispositivo a la red. Si el problema persiste, contáctanos de nuevo."
-        ]
-      },
-      {
-        "tag": "recuperar_contraseña",
-        "patterns": [
-          "Olvidé mi contraseña",
-          "No puedo acceder a mi cuenta",
-          "Necesito recuperar mi contraseña",
-          "¿Cómo restablezco mi contraseña?",
-          "Ayuda con la contraseña"
-        ],
-        "responses": [
-          "Puedes restablecer tu contraseña haciendo clic en 'Olvidé mi contraseña' en la página de inicio de sesión.",
-          "Para recuperar tu contraseña, ve a la sección de inicio de sesión y selecciona '¿Olvidaste tu contraseña?'. Te enviaremos un enlace a tu correo.",
-          "Intenta acceder a 'Olvidé mi contraseña' y sigue las instrucciones para restablecerla."
-        ]
-      },
-      {
-        "tag": "facturacion",
-        "patterns": [
-          "Quiero revisar mi factura",
-          "¿Dónde veo mis pagos?",
-          "Tengo una pregunta sobre la facturación",
-          "Información de pago",
-          "No entiendo mi factura"
-        ],
-        "responses": [
-          "Puedes ver tus facturas y pagos en la sección de 'Facturación' en tu cuenta.",
-          "Para acceder a tu historial de facturación, entra en tu perfil y selecciona 'Facturación'.",
-          "Revisa todos tus pagos y facturas en la sección de 'Mi cuenta' > 'Facturación'. ¿Te ayudo con algo más?"
-        ]
-      },
-      {
-        "tag": "despedida",
-        "patterns": [
-          "Gracias",
-          "Eso es todo",
-          "Adiós",
-          "Hasta luego",
-          "Muchas gracias por la ayuda"
-        ],
-        "responses": [
-          "¡De nada! Si necesitas más ayuda, aquí estaré.",
-          "Fue un placer ayudarte. ¡Que tengas un buen día!",
-          "Gracias por contactarnos. ¡Hasta luego!",
-          "¡Hasta pronto! No dudes en volver si tienes más preguntas."
-        ]
-      }
+        {
+            "tag": "saludo",
+            "patterns": [
+                "Hola",
+                "holi",
+                "Buenas",
+                "Hola, ¿me ayudas?",
+                "¿Hay alguien ahí?",
+                "Hola, soporte",
+                "¿Qué tal?",
+                "¡Hola a todos!",
+                "¿Cómo están?",
+                "Buen día",
+                "Hola, necesito ayuda",
+                "Hey, ¿me puedes ayudar?"
+            ],
+            "responses": [
+                "Hola, ¿en qué puedo ayudarte?",
+                "¡Hola! ¿Cómo te puedo ayudar hoy?",
+                "Hola, ¿qué problema técnico tienes?",
+                "¡Bienvenido al soporte! ¿Cuál es el inconveniente que estás experimentando?",
+                "Hola, estoy aquí para ayudarte. ¿Cuál es tu consulta?",
+                "¡Hola! Cuéntame, ¿cómo puedo asistirte?",
+                "¡Buen día! ¿Cómo puedo ayudarte hoy?",
+                "¡Hola! Dime cómo puedo solucionarte el problema.",
+                "¡Hola! Estoy aquí para cualquier consulta que tengas.",
+                "¡Un gusto saludarte! ¿Cómo puedo ayudarte el día de hoy?",
+                "¡Hey! ¿En qué necesitas apoyo?"
+            ]
+        },
+        {
+            "tag": "problema_conexion",
+            "patterns": [
+                "No tengo conexión",
+                "No puedo conectarme",
+                "Hay problemas de conexión",
+                "¿Por qué no tengo internet?",
+                "La conexión está lenta",
+                "Se cayó el internet",
+                "¿Cómo soluciono mi problema de conexión?",
+                "El Wi-Fi no funciona",
+                "No puedo navegar en internet",
+                "La red está inestable"
+            ],
+            "responses": [
+                "Lamento que tengas problemas de conexión. Primero, intenta reiniciar tu enrutador.",
+                "Por favor, asegúrate de que tu dispositivo esté conectado a la red Wi-Fi y prueba reiniciarlo.",
+                "Intenta desconectar y volver a conectar tu dispositivo a la red. Si el problema persiste, contáctanos de nuevo.",
+                "Verifica si hay cortes de servicio en tu área antes de reiniciar tus equipos.",
+                "Si el problema continúa, prueba reiniciar tu dispositivo y verifica las configuraciones de red.",
+                "Asegúrate de que todos los cables estén bien conectados. Si nada funciona, por favor infórmanos.",
+                "Prueba cambiar a una red diferente para descartar problemas de tu proveedor.",
+                "Si estás usando un cable de red, revisa que esté conectado correctamente.",
+                "Puedes intentar olvidar la red Wi-Fi en tu dispositivo y volver a conectarte con la contraseña correcta.",
+                "¿Has probado contactar a tu proveedor de internet? Podría tratarse de un problema externo."
+            ],
+            "options":[]
+        },
+        {
+            "tag": "recuperar_contraseña",
+            "patterns": [
+                "Olvidé mi contraseña",
+                "No puedo acceder a mi cuenta",
+                "Necesito recuperar mi contraseña",
+                "¿Cómo restablezco mi contraseña?",
+                "Ayuda con la contraseña",
+                "No recuerdo mi clave",
+                "Problemas para iniciar sesión",
+                "Mi contraseña no funciona",
+                "Quiero cambiar mi contraseña",
+                "¿Cómo puedo modificar mi clave?"
+            ],
+            "responses": [
+                "Puedes restablecer tu contraseña haciendo clic en 'Olvidé mi contraseña' en la página de inicio de sesión.",
+                "Para recuperar tu contraseña, ve a la sección de inicio de sesión y selecciona '¿Olvidaste tu contraseña?'. Te enviaremos un enlace a tu correo.",
+                "Intenta acceder a 'Olvidé mi contraseña' y sigue las instrucciones para restablecerla.",
+                "Revisa tu correo electrónico después de solicitar el restablecimiento de tu contraseña.",
+                "Si no recibes el correo para cambiar la contraseña, verifica tu bandeja de spam o inténtalo de nuevo.",
+                "En caso de seguir teniendo problemas, contáctanos para asistirte directamente con la recuperación de tu cuenta.",
+                "Si no puedes acceder a tu correo, intenta comunicarte con nuestro soporte para obtener ayuda adicional.",
+                "Asegúrate de ingresar correctamente el correo asociado a tu cuenta al intentar recuperar tu contraseña.",
+                "Recuerda que el enlace de recuperación de contraseña tiene un tiempo límite. Intenta solicitarlo nuevamente si expira.",
+                "Si has intentado varias veces sin éxito, podría ser necesario verificar tu identidad. Contáctanos para ayudarte."
+            ]
+        },
+        {
+            "tag": "facturacion",
+            "patterns": [
+                "Quiero revisar mi factura",
+                "¿Dónde veo mis pagos?",
+                "Tengo una pregunta sobre la facturación",
+                "Información de pago",
+                "No entiendo mi factura",
+                "¿Cómo reviso mis facturas?",
+                "Quiero saber el detalle de mis pagos",
+                "Mi factura tiene un error",
+                "¿Puedo descargar mi factura?",
+                "Quiero verificar un cobro"
+            ],
+            "responses": [
+                "Puedes ver tus facturas y pagos en la sección de 'Facturación' en tu cuenta.",
+                "Para acceder a tu historial de facturación, entra en tu perfil y selecciona 'Facturación'.",
+                "Revisa todos tus pagos y facturas en la sección de 'Mi cuenta' > 'Facturación'. ¿Te ayudo con algo más?",
+                "En tu perfil, encontrarás la opción 'Mis facturas', donde podrás revisar y descargar tus comprobantes.",
+                "Si crees que hay un error en tu factura, contáctanos para verificar los detalles.",
+                "¿Tienes dudas sobre un cobro específico? Puedo ayudarte a resolverlas.",
+                "Revisa si hay facturas pendientes en la sección de 'Pagos' de tu cuenta.",
+                "Si necesitas un comprobante oficial, puedes descargarlo directamente desde 'Facturación'.",
+                "Recuerda que los pagos se reflejan en tu cuenta después de un tiempo. Revisa si el tuyo ya fue procesado."
+            ]
+        },
+        {
+            "tag": "despedida",
+            "patterns": [
+                "Gracias",
+                "Eso es todo",
+                "Adiós",
+                "Hasta luego",
+                "Muchas gracias por la ayuda",
+                "Nos vemos",
+                "Chao",
+                "Gracias por la atención",
+                "Me despido",
+                "Bye"
+            ],
+            "responses": [
+                "¡De nada! Si necesitas más ayuda, aquí estaré.",
+                "Fue un placer ayudarte. ¡Que tengas un buen día!",
+                "Gracias por contactarnos. ¡Hasta luego!",
+                "¡Hasta pronto! No dudes en volver si tienes más preguntas.",
+                "Espero haberte ayudado. ¡Nos vemos la próxima!",
+                "¡Adiós! Estamos aquí para cuando lo necesites nuevamente.",
+                "¡Gracias por confiar en nosotros! Que tengas un excelente día.",
+                "¡Hasta la próxima! Recuerda que siempre puedes contar con nuestro soporte.",
+                "¡Nos vemos pronto! Espero haberte sido de ayuda.",
+                "Gracias por tu tiempo. ¡Estamos aquí para cualquier consulta futura!"
+            ]
+        }
     ]
-  }
+}

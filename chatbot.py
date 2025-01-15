@@ -11,10 +11,6 @@ intents = json.loads(open('intents_spanish.json', 'r', encoding='utf-8').read())
 
 words = pickle.load(open('words.pkl', 'rb')) # Load the words.pkl file
 classes = pickle.load(open('classes.pkl', 'rb')) # Load the classes.pkl file
-import shutil
-
-#shutil.copyfile(r'C:/Users/baog6/Documents/proyecto-1/chatbot_model.h5', r'C:/Users/baog6/Documents/proyecto-1/chatbot_model_temp.h5')
-#model = load_model(r'C:/Users/baog6/Documents/proyecto-1/chatbot_model_temp.h5')
 
 model = load_model(r'C:/Users/baog6/Documents/proyecto-1/chatbot_model.h5')
 def clean_up_sentence(sentence): # Create a function to clean up the user's input
@@ -40,7 +36,9 @@ def predict_class(sentence):
     return_list = [] # Create an empty list
     for r in results: # Loop through the results
         return_list.append({'intent': classes[r[0]], 'probability': str(r[1])}) #
+    print(return_list)
     return return_list # Return the list
+
 
 def get_response(intents_list, intents_json):
     tag = intents_list[0]['intent'] # Get the tag of the intent
