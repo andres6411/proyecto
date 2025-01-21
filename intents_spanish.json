@@ -56,33 +56,473 @@
                 "Puedes intentar olvidar la red Wi-Fi en tu dispositivo y volver a conectarte con la contraseña correcta.",
                 "¿Has probado contactar a tu proveedor de internet? Podría tratarse de un problema externo."
             ],
-            "options":[]
+            "sub_intents": [
+                {
+                    "tag": "Lentitud_en_la_conexion",
+                    "patterns": [
+                        "La conexión está muy lenta",
+                        "La red está muy lenta",
+                        "Internet muy lento",
+                        "La conexión se demora mucho",
+                        "Navegar es muy lento"
+                    ],
+                    "responses": [
+                        "Lamento que tu conexión esté lenta. Te recomiendo reiniciar tu enrutador.",
+                        "Prueba desconectar y volver a conectar tu dispositivo a la red para mejorar la velocidad.",
+                        "Si la velocidad sigue baja, intenta revisar la congestión en la red o usar una conexión diferente.",
+                        "Te sugiero probar cambiar a una red 5GHz si tienes esa opción disponible.",
+                        "A veces, desconectar otros dispositivos de la red puede ayudar a mejorar la velocidad."
+                    ]
+                },
+                {
+                    "tag": "Corte_total_del_servicio",
+                    "patterns": [
+                        "Se ha caído el servicio",
+                        "No hay internet",
+                        "La conexión no funciona",
+                        "No tengo servicio",
+                        "No hay señal"
+                    ],
+                    "responses": [
+                        "Lamento mucho que no tengas servicio. Verifica si hay cortes de servicio en tu área.",
+                        "Por favor, revisa si el módem está correctamente conectado y encendido.",
+                        "Es posible que haya un corte general del servicio. Verifica con tu proveedor.",
+                        "Si el problema persiste, intenta reiniciar tu módem y verificar las conexiones.",
+                        "Asegúrate de que los cables estén bien conectados y que tu equipo esté funcionando correctamente."
+                    ]
+                },
+            {
+                "tag": "Problemas_con_Wi-Fi",
+                "patterns": [
+                    "No puedo conectar mi dispositivo al Wi-Fi",
+                    "El Wi-Fi no funciona",
+                    "No se conecta al Wi-Fi",
+                    "Tengo problemas con mi Wi-Fi",
+                    "El Wi-Fi está caído"
+                ],
+                "responses": [
+                    "Asegúrate de que el Wi-Fi esté habilitado en tu dispositivo y que estés en el alcance de la señal.",
+                    "Intenta desconectar y volver a conectar a la red Wi-Fi, o reinicia tu dispositivo.",
+                    "Si no puedes conectarte, intenta reiniciar el enrutador y verificar la configuración de la red.",
+                    "Verifica que la contraseña sea correcta y que no haya conflictos con otras redes cercanas.",
+                    "Si el problema persiste, intenta olvidar la red Wi-Fi en tu dispositivo y volver a conectarte."
+                ]
+            },
+                {
+                    "tag": "Configuracion_del_modem_router",
+                    "patterns": [
+                        "No sé cómo configurar mi módem",
+                        "Cómo configurar el router",
+                        "Necesito ayuda con la configuración del módem",
+                        "¿Cómo configurar mi Wi-Fi?",
+                        "Quiero cambiar la configuración de mi router"
+                    ],
+                    "responses": [
+                        "Puedes configurar tu módem accediendo a la página de configuración en el navegador con la IP proporcionada en el manual.",
+                        "Si necesitas ayuda para configurar tu Wi-Fi, ingresa la clave en la sección de ajustes de tu router.",
+                        "Revisa el manual de tu módem para conocer los pasos de configuración específicos según tu modelo.",
+                        "Te recomiendo verificar la página de soporte de tu proveedor para guías de configuración detalladas.",
+                        "Si no estás seguro de la configuración, puedo ayudarte con los pasos básicos de configuración."
+                    ]
+                },
+                {
+                    "tag": "Diagnostico_de_la_red",
+                    "patterns": [
+                        "¿Cómo diagnostico mi red?",
+                        "Tengo problemas con la conexión, ¿cómo lo soluciono?",
+                        "¿Hay algún problema con mi red?",
+                        "Quiero saber si mi red está funcionando bien",
+                        "Diagnóstico de red"
+                    ],
+                    "responses": [
+                        "Puedes realizar un diagnóstico de red desde la configuración de tu router para detectar problemas.",
+                        "Te sugiero probar con herramientas en línea para verificar la velocidad y el estado de la red.",
+                        "Si la red está lenta, intenta reiniciar el router y verifica si mejora la señal.",
+                        "Una prueba de ping puede ayudarte a identificar problemas con la conexión.",
+                        "Si los problemas persisten, contáctanos para realizar un diagnóstico más detallado."
+                    ]
+                },
+                {
+                    "tag": "Otro_tipo_de_problema",
+                    "patterns": [
+                        "Tengo un problema distinto",
+                        "Mi problema no está en la lista",
+                        "No sé qué está pasando",
+                        "Tengo un inconveniente técnico",
+                        "Un problema desconocido"
+                    ],
+                    "responses": [
+                        "Lo siento por el inconveniente. ¿Puedes describir tu problema con más detalles?",
+                        "Dime más sobre el problema y con gusto intentaré ayudarte.",
+                        "Voy a ayudarte con eso. Cuéntame un poco más sobre el problema que estás enfrentando.",
+                        "Por favor, detállame el inconveniente y veremos cómo solucionarlo.",
+                        "Intentemos resolverlo juntos. Explícame qué sucede."
+                    ]
+                },
+                {
+                    "tag": "Hablar_con_un_asesor",
+                    "patterns": [
+                        "Quiero hablar con un asesor",
+                        "Necesito hablar con un experto",
+                        "¿Puedo hablar con alguien?",
+                        "Quiero contactar a un agente",
+                        "¿Puedo hablar con soporte?"
+                    ],
+                    "responses": [
+                        "Claro, puedo conectar con un asesor para que te ayude personalmente.",
+                        "Si necesitas hablar con un experto, te pondré en contacto con uno de nuestros agentes.",
+                        "Un asesor te asistirá pronto, solo un momento por favor.",
+                        "Voy a conectarte con un agente especializado, pronto recibirás ayuda.",
+                        "Si prefieres hablar con alguien directamente, puedo derivarte a un asesor."
+                    ]
+                },
+                {
+                    "tag": "Solucione_el_problema_gracias",
+                    "patterns": [
+                        "¡Todo solucionado, gracias!",
+                        "El problema se resolvió, gracias",
+                        "¡Ya todo está bien, muchas gracias!",
+                        "Gracias, ya no tengo problemas",
+                        "El inconveniente se solucionó, gracias"
+                    ],
+                    "responses": [
+                        "¡Me alegra saber que se solucionó! Si necesitas algo más, no dudes en contactar.",
+                        "¡Qué bueno que todo esté funcionando bien ahora! ¡Gracias a ti!",
+                        "¡Perfecto! Si surge otro problema, estaré aquí para ayudarte.",
+                        "¡Me alegra que hayas podido solucionar el problema! ¡Que tengas un excelente día!",
+                        "¡Genial! Si necesitas asistencia en el futuro, no dudes en volver. ¡Hasta pronto!"
+                    ]
+                }
+            ]
         },
         {
-            "tag": "recuperar_contraseña",
+            "tag": "problemas_con_telefonia",
             "patterns": [
-                "Olvidé mi contraseña",
-                "No puedo acceder a mi cuenta",
-                "Necesito recuperar mi contraseña",
-                "¿Cómo restablezco mi contraseña?",
-                "Ayuda con la contraseña",
-                "No recuerdo mi clave",
-                "Problemas para iniciar sesión",
-                "Mi contraseña no funciona",
-                "Quiero cambiar mi contraseña",
-                "¿Cómo puedo modificar mi clave?"
+                "Tengo problemas con mi línea telefónica",
+                "No puedo hacer ni recibir llamadas",
+                "La señal de mi teléfono es muy débil",
+                "Mi teléfono no tiene señal",
+                "No puedo realizar llamadas",
+                "No puedo recibir llamadas",
+                "La llamada se corta constantemente",
+                "No tengo cobertura",
+                "El servicio de telefonía no está funcionando",
+                "Mi teléfono no se conecta a la red"
             ],
             "responses": [
-                "Puedes restablecer tu contraseña haciendo clic en 'Olvidé mi contraseña' en la página de inicio de sesión.",
-                "Para recuperar tu contraseña, ve a la sección de inicio de sesión y selecciona '¿Olvidaste tu contraseña?'. Te enviaremos un enlace a tu correo.",
-                "Intenta acceder a 'Olvidé mi contraseña' y sigue las instrucciones para restablecerla.",
-                "Revisa tu correo electrónico después de solicitar el restablecimiento de tu contraseña.",
-                "Si no recibes el correo para cambiar la contraseña, verifica tu bandeja de spam o inténtalo de nuevo.",
-                "En caso de seguir teniendo problemas, contáctanos para asistirte directamente con la recuperación de tu cuenta.",
-                "Si no puedes acceder a tu correo, intenta comunicarte con nuestro soporte para obtener ayuda adicional.",
-                "Asegúrate de ingresar correctamente el correo asociado a tu cuenta al intentar recuperar tu contraseña.",
-                "Recuerda que el enlace de recuperación de contraseña tiene un tiempo límite. Intenta solicitarlo nuevamente si expira.",
-                "Si has intentado varias veces sin éxito, podría ser necesario verificar tu identidad. Contáctanos para ayudarte."
+                "Lamento que estés experimentando problemas con la telefonía. Te recomiendo revisar si tu dispositivo tiene suficiente señal.",
+                "Asegúrate de que no esté activado el modo avión en tu dispositivo, lo cual bloquearía las llamadas.",
+                "Si no tienes señal, intenta reiniciar tu teléfono o verifica si hay interrupciones en la red de tu proveedor.",
+                "Verifica si tu línea está activada y si tienes saldo o cobertura suficiente para hacer llamadas.",
+                "Si el problema persiste, puedes intentar restablecer los ajustes de red en tu dispositivo o contactar a tu proveedor.",
+                "Si estás en una zona con baja cobertura, intenta moverte a un lugar con mejor señal.",
+                "Si tienes problemas constantes, te sugiero contactar con tu proveedor de telefonía para revisar tu servicio.",
+                "Intenta apagar y encender tu dispositivo para restablecer la conexión con la red.",
+                "Si el problema está relacionado con la cobertura, puede ser útil verificar con tu proveedor si hay cortes de servicio en tu área."
+            ]
+            ,
+            "sub_intents": [
+                {
+                    "tag": "Llamadas_caidas",
+                    "patterns": [
+                        "Mis llamadas se caen",
+                        "Las llamadas se interrumpen",
+                        "No puedo mantener la llamada",
+                        "Las llamadas se cortan",
+                        "La llamada se desconecta"
+                    ],
+                    "responses": [
+                        "Lamento que tus llamadas se caigan. Prueba reiniciando tu dispositivo y verifica si el problema persiste.",
+                        "Intenta reiniciar tu red o cambiar a una red más estable.",
+                        "Si el problema continúa, verifica si tu proveedor está experimentando interrupciones en el servicio.",
+                        "Asegúrate de que tu dispositivo tenga una buena señal y que no haya interferencias en la red.",
+                        "Si estás usando una red Wi-Fi, intenta cambiar a datos móviles o viceversa."
+                    ]
+                },
+                {
+                    "tag": "Interferencia_en_las_llamadas",
+                    "patterns": [
+                        "Escucho interferencias en las llamadas",
+                        "Hay ruidos en las llamadas",
+                        "Mi llamada tiene interferencia",
+                        "La voz está distorsionada",
+                        "No puedo escuchar bien en las llamadas"
+                    ],
+                    "responses": [
+                        "La interferencia puede ser causada por una mala señal o por dispositivos cercanos. Intenta moverte a un lugar con mejor cobertura.",
+                        "Asegúrate de que tu dispositivo esté actualizado y no tenga aplicaciones en segundo plano que puedan interferir.",
+                        "Si estás usando Bluetooth, intenta desconectarlo y usa el altavoz o auriculares directamente.",
+                        "Verifica que no haya otros dispositivos electrónicos causando interferencias cerca de tu teléfono.",
+                        "Si la interferencia persiste, prueba reiniciar tu dispositivo o la red."
+                    ]
+                },
+                {
+                    "tag": "Problemas_con_el_buzon_de_voz",
+                    "patterns": [
+                        "No puedo acceder a mi buzón de voz",
+                        "Mi buzón de voz no funciona",
+                        "No recibo notificaciones de mensajes en mi buzón",
+                        "Tengo problemas con el buzón de voz",
+                        "No puedo escuchar los mensajes del buzón"
+                    ],
+                    "responses": [
+                        "Asegúrate de que la función de buzón de voz esté activada en tu teléfono. Si no es así, intenta configurarlo en la aplicación de teléfono.",
+                        "Si no puedes acceder al buzón de voz, prueba reiniciar tu dispositivo y verifica si se soluciona.",
+                        "Revisa si tienes suficiente espacio en tu buzón de voz para recibir nuevos mensajes.",
+                        "Verifica que tu proveedor de servicios no esté teniendo problemas con el buzón de voz.",
+                        "Si el problema persiste, contacta a tu proveedor para revisar tu servicio de buzón de voz."
+                    ]
+                },
+                {
+                    "tag": "No_puedo_realizar_llamadas",
+                    "patterns": [
+                        "No puedo hacer llamadas",
+                        "No puedo realizar una llamada",
+                        "Las llamadas no se conectan",
+                        "Mi teléfono no hace llamadas",
+                        "No puedo marcar números"
+                    ],
+                    "responses": [
+                        "Verifica que tu teléfono tenga señal suficiente para realizar llamadas.",
+                        "Si estás utilizando una red Wi-Fi para realizar llamadas, asegúrate de que esté funcionando correctamente.",
+                        "Asegúrate de que no hayas bloqueado accidentalmente las llamadas salientes en la configuración de tu teléfono.",
+                        "Si el problema persiste, prueba reiniciar tu dispositivo o restablecer los ajustes de red.",
+                        "Si aún no puedes hacer llamadas, te recomiendo que contactes a tu proveedor para revisar tu línea."
+                    ]
+                },
+                {
+                    "tag": "No_puedo_recibir_llamadas",
+                    "patterns": [
+                        "No recibo llamadas",
+                        "Las llamadas no llegan a mi teléfono",
+                        "No me llaman",
+                        "No puedo recibir llamadas entrantes",
+                        "No recibo notificaciones de llamadas"
+                    ],
+                    "responses": [
+                        "Verifica si tienes señal suficiente para recibir llamadas.",
+                        "Si estás en modo avión, desactívalo para poder recibir llamadas.",
+                        "Revisa si tienes alguna configuración de bloqueo que esté impidiendo que lleguen las llamadas.",
+                        "Prueba reiniciar tu dispositivo o restablecer los ajustes de red.",
+                        "Si el problema persiste, contacta a tu proveedor para confirmar que tu línea está activa."
+                    ]
+                },
+                {
+                    "tag": "Otro_tipo_de_problema",
+                    "patterns": [
+                        "Tengo un problema diferente con las llamadas",
+                        "Mi problema no está en la lista de llamadas",
+                        "No sé qué pasa con mis llamadas",
+                        "Tengo inconvenientes con las llamadas",
+                        "Un problema con las llamadas que no está listado"
+                    ],
+                    "responses": [
+                        "Lamento el inconveniente. ¿Puedes describir más detalladamente el problema con tus llamadas?",
+                        "Cuéntame más sobre el problema con las llamadas y veremos cómo solucionarlo.",
+                        "Explícame mejor lo que sucede con tus llamadas para que podamos encontrar la mejor solución.",
+                        "Por favor, detállame el inconveniente y con gusto te asistiré.",
+                        "Estoy aquí para ayudarte. Cuéntame un poco más sobre el problema que estás enfrentando con las llamadas."
+                    ]
+                },
+                {
+                    "tag": "Hablar_con_un_asesor",
+                    "patterns": [
+                        "Quiero hablar con un asesor sobre las llamadas",
+                        "Necesito hablar con un agente",
+                        "¿Puedo hablar con soporte técnico?",
+                        "¿Puedo contactar a un experto?",
+                        "Quiero recibir ayuda directa de un asesor"
+                    ],
+                    "responses": [
+                        "Claro, puedo conectarte con un asesor que te ayudará a resolver el problema.",
+                        "Voy a derivarte con uno de nuestros expertos para que pueda asistirte mejor.",
+                        "Un agente estará en contacto contigo para ayudarte con tu inconveniente.",
+                        "Te pondré en contacto con un asesor especializado. Un momento por favor.",
+                        "Te conectaré con soporte para que recibas ayuda directa. ¡Un momento!"
+                    ]
+                },
+                {
+                    "tag": "Solucione_el_problema_gracias",
+                    "patterns": [
+                        "¡Todo solucionado, gracias!",
+                        "El problema con las llamadas ya se resolvió, gracias",
+                        "¡Las llamadas ya funcionan bien, muchas gracias!",
+                        "El inconveniente de las llamadas está resuelto, gracias",
+                        "Gracias, ya puedo hacer y recibir llamadas"
+                    ],
+                    "responses": [
+                        "¡Qué bueno que el problema se resolvió! Si necesitas algo más, no dudes en contactarnos.",
+                        "Me alegra saber que todo funciona correctamente ahora. ¡Gracias a ti!",
+                        "Perfecto, ¡me alegra que todo esté en orden! Si tienes más preguntas, aquí estamos.",
+                        "¡Me alegra que el problema esté resuelto! No dudes en volver si necesitas más ayuda.",
+                        "¡Excelente! Si en el futuro tienes algún otro inconveniente, no dudes en contactarnos nuevamente."
+                    ]
+                }
+            ]
+        },
+        {
+            "tag": "problemas_con_television",
+            "patterns": [
+                "No puedo ver la televisión",
+                "La señal de mi televisión está perdida",
+                "La televisión no enciende",
+                "No tengo imagen en la televisión",
+                "El sonido de la televisión no funciona",
+                "La imagen está congelada",
+                "El canal no carga",
+                "La televisión tiene interferencia",
+                "La pantalla de la televisión está negra",
+                "No tengo señal de televisión"
+            ],
+            "responses": [
+                "Lamento que tengas problemas con tu televisión. Verifica primero que el televisor esté encendido y que todos los cables estén correctamente conectados.",
+                "Si la imagen está congelada, intenta apagar y encender la televisión para reiniciar el sistema.",
+                "Verifica que el canal o fuente de entrada esté correctamente seleccionado en tu televisor.",
+                "Si no tienes señal, asegúrate de que tu antena o receptor de señal esté funcionando correctamente.",
+                "Revisa que tu proveedor de televisión no esté teniendo problemas de servicio en tu área.",
+                "Si el problema es con el sonido, verifica que el volumen esté ajustado correctamente y que los altavoces no estén desconectados.",
+                "Si la pantalla está negra, prueba reiniciar el televisor y verificar las conexiones HDMI o de cable.",
+                "Si tu televisión es de pago por suscripción, verifica que tu cuenta esté activa y al día.",
+                "Si continúas teniendo problemas con la señal o la imagen, intenta contactar a tu proveedor de televisión para soporte técnico.",
+                "Si la televisión tiene interferencias, intenta ajustar la antena o cambiar el canal de frecuencia."
+            ],
+            "sub_intents": [
+                {
+                    "tag": "Sin_senal_en_el_decodificador",
+                    "patterns": [
+                        "No tengo señal en el decodificador",
+                        "El decodificador no recibe señal",
+                        "No veo nada en la televisión",
+                        "El decodificador está sin señal",
+                        "La señal del decodificador está perdida"
+                    ],
+                    "responses": [
+                        "Verifica que todos los cables del decodificador estén correctamente conectados, incluyendo el cable de antena o satélite.",
+                        "Asegúrate de que el decodificador esté encendido y que no haya ningún problema con la toma de corriente.",
+                        "Intenta reiniciar el decodificador apagándolo y encendiéndolo de nuevo.",
+                        "Verifica que tu proveedor de televisión no esté teniendo problemas de servicio en tu área.",
+                        "Si el problema persiste, intenta desconectar y volver a conectar el cable de antena o satélite."
+                    ]
+                },
+                {
+                    "tag": "Pantalla_congelada_o_pixelada",
+                    "patterns": [
+                        "La pantalla está congelada",
+                        "La imagen está pixelada",
+                        "La televisión se congela",
+                        "La imagen no se ve bien",
+                        "Tengo una pantalla pixelada"
+                    ],
+                    "responses": [
+                        "Si la pantalla está congelada, intenta apagar y encender la televisión para reiniciar el sistema.",
+                        "Verifica que el cable HDMI o de conexión esté correctamente conectado y no esté dañado.",
+                        "Si la imagen está pixelada, intenta cambiar el canal o fuente de entrada para ver si el problema persiste.",
+                        "Asegúrate de que no haya interferencias de otros dispositivos electrónicos cerca de la televisión.",
+                        "Si el problema persiste, verifica la calidad de tu señal, ya que puede estar afectada por la red o antena."
+                    ]
+                },
+                {
+                    "tag": "Problemas_con_canales_especificos",
+                    "patterns": [
+                        "No puedo ver un canal específico",
+                        "Un canal no se ve bien",
+                        "Un canal está fallando",
+                        "No puedo sintonizar un canal",
+                        "El canal X no funciona"
+                    ],
+                    "responses": [
+                        "Verifica que el canal esté correctamente sintonizado y que no haya problemas con la señal de ese canal en particular.",
+                        "Si el problema es solo con un canal, intenta cambiar de canal y luego volver a sintonizar el canal afectado.",
+                        "Revisa si hay interrupciones de servicio en tu área que puedan estar afectando a ese canal específico.",
+                        "Si el canal sigue sin funcionar, intenta restablecer el decodificador y verificar las conexiones.",
+                        "En algunos casos, puede ser necesario ajustar la antena o la fuente de señal para ese canal."
+                    ]
+                },
+                {
+                    "tag": "Configuracion_del_control_remoto",
+                    "patterns": [
+                        "El control remoto no funciona",
+                        "No puedo cambiar de canal con el control",
+                        "El control remoto no responde",
+                        "El control remoto está fallando",
+                        "No puedo encender la televisión con el control"
+                    ],
+                    "responses": [
+                        "Verifica que las baterías del control remoto estén correctamente instaladas y cargadas.",
+                        "Si el control remoto no responde, intenta restablecerlo retirando las baterías y volviéndolas a poner.",
+                        "Asegúrate de que no haya obstrucciones entre el control remoto y el receptor de la televisión.",
+                        "Si el control sigue sin funcionar, intenta usar el control remoto de repuesto o la aplicación del teléfono como control alternativo.",
+                        "Si el problema persiste, puede ser necesario contactar con el soporte técnico para revisar el control remoto."
+                    ]
+                },
+                {
+                    "tag": "Actualizacion_del_sistema_de_TV",
+                    "patterns": [
+                        "Mi televisión no se actualiza",
+                        "¿Cómo actualizo mi televisor?",
+                        "La televisión no tiene la última actualización",
+                        "El sistema de TV está desactualizado",
+                        "No puedo actualizar el software de la televisión"
+                    ],
+                    "responses": [
+                        "Asegúrate de que tu televisor esté conectado a internet para poder recibir las actualizaciones de sistema.",
+                        "Verifica en el menú de configuración de la televisión si hay actualizaciones disponibles.",
+                        "Si la actualización no se descarga automáticamente, intenta buscarla manualmente en la sección de 'Actualización de software' de tu televisor.",
+                        "En algunos casos, puede ser necesario reiniciar el televisor antes de que se inicie la actualización.",
+                        "Si el problema persiste, revisa el sitio web del fabricante para obtener la última versión del software o contacta con el soporte técnico."
+                    ]
+                },
+                {
+                    "tag": "Otro_tipo_de_problema",
+                    "patterns": [
+                        "Tengo otro problema con la televisión",
+                        "Mi televisión tiene un inconveniente que no está listado",
+                        "Tengo un problema técnico con la TV",
+                        "No sé qué pasa con mi televisión",
+                        "Un problema diferente con la televisión"
+                    ],
+                    "responses": [
+                        "Lamento el inconveniente. Por favor, describe más detalladamente el problema con la televisión y con gusto te ayudaré.",
+                        "Cuéntame más sobre el problema y veremos cómo solucionarlo.",
+                        "Estoy aquí para ayudarte. Explícame mejor lo que sucede y buscaremos una solución.",
+                        "Por favor, detállame el inconveniente y estaré encantado de asistirte.",
+                        "Dime qué sucede exactamente con la televisión y te proporcionaré la mejor solución."
+                    ]
+                },
+                {
+                    "tag": "Hablar_con_un_asesor",
+                    "patterns": [
+                        "Quiero hablar con un asesor sobre la televisión",
+                        "Necesito ayuda de un experto en televisión",
+                        "¿Puedo hablar con alguien sobre mi televisión?",
+                        "Quiero recibir asistencia directa con la TV",
+                        "¿Puedo hablar con soporte técnico?"
+                    ],
+                    "responses": [
+                        "Claro, puedo ponerte en contacto con un asesor especializado en televisión.",
+                        "Te conectaré con un experto que podrá ayudarte a resolver el problema de tu televisión.",
+                        "Voy a derivarte a un agente especializado para que te asista mejor.",
+                        "Un asesor estará en breve disponible para ayudarte con cualquier problema de la televisión.",
+                        "Te pondré en contacto con soporte técnico, un momento por favor."
+                    ]
+                },
+                {
+                    "tag": "Solucione_el_problema_gracias",
+                    "patterns": [
+                        "¡Todo solucionado, gracias!",
+                        "El problema con la televisión ya está resuelto, gracias",
+                        "¡La televisión funciona correctamente ahora, muchas gracias!",
+                        "El problema de la TV se solucionó, gracias",
+                        "Gracias, todo está bien con la televisión ahora"
+                    ],
+                    "responses": [
+                        "¡Me alegra que todo esté solucionado! Si necesitas más ayuda, no dudes en contactarnos.",
+                        "Qué bueno que el problema se resolvió, ¡gracias por avisar! Si necesitas algo más, aquí estaré.",
+                        "¡Perfecto! Me alegra que todo esté en orden. Si necesitas algo más, no dudes en preguntar.",
+                        "¡Excelente! Si en el futuro tienes algún problema con la televisión, estamos aquí para ayudarte.",
+                        "¡Qué bueno que todo esté solucionado! Si tienes alguna otra duda, no dudes en regresar."
+                    ]
+                }
             ]
         },
         {
@@ -109,6 +549,570 @@
                 "Revisa si hay facturas pendientes en la sección de 'Pagos' de tu cuenta.",
                 "Si necesitas un comprobante oficial, puedes descargarlo directamente desde 'Facturación'.",
                 "Recuerda que los pagos se reflejan en tu cuenta después de un tiempo. Revisa si el tuyo ya fue procesado."
+            ],
+            "sub_intents": [
+                {
+                    "tag": "Consultar mi saldo o factura",
+                    "patterns": [
+                        "¿Cómo consulto mi saldo?",
+                        "Quiero revisar mi factura",
+                        "¿Dónde puedo ver el saldo pendiente?",
+                        "¿Cómo verifico mi saldo actual?",
+                        "Quiero saber el detalle de mi factura",
+                        "Necesito información de mi saldo"
+                    ],
+                    "responses": [
+                        "Puedes consultar tu saldo o factura en la sección 'Facturación' de tu cuenta.",
+                        "Accede a 'Facturación' en tu perfil para revisar los detalles de tu saldo actual.",
+                        "Revisa tu saldo pendiente en 'Mi cuenta' > 'Facturación'.",
+                        "En tu perfil encontrarás una sección llamada 'Saldo y Facturación' para más detalles.",
+                        "Si necesitas descargar tu factura, puedes hacerlo directamente desde la sección de 'Facturación'."
+                    ]
+                },
+                {
+                    "tag": "Problemas con un pago reciente",
+                    "patterns": [
+                        "El pago que hice no aparece",
+                        "Tengo problemas con un pago reciente",
+                        "¿Por qué mi pago no se refleja?",
+                        "Mi pago no ha sido procesado",
+                        "Hice un pago pero no lo veo registrado",
+                        "Quiero reportar un problema con mi pago"
+                    ],
+                    "responses": [
+                        "Lamentamos el inconveniente. Por favor, verifica si el pago fue procesado en la sección de 'Historial de pagos'.",
+                        "Si el pago no aparece, espera unos minutos o contacta a soporte con el comprobante.",
+                        "Revisa si ingresaste los datos correctos al realizar el pago.",
+                        "Es posible que haya un retraso en el procesamiento. Vuelve a comprobar más tarde.",
+                        "Si el problema persiste, por favor contáctanos para resolverlo."
+                    ]
+                },
+                {
+                    "tag": "Cambio de método de pago",
+                    "patterns": [
+                        "Quiero cambiar mi método de pago",
+                        "¿Cómo actualizo mi tarjeta de pago?",
+                        "Deseo usar otro método de pago",
+                        "Quiero modificar mi información de pago",
+                        "¿Puedo cambiar cómo pago mis facturas?",
+                        "Cambiar mi tarjeta de crédito registrada"
+                    ],
+                    "responses": [
+                        "Puedes cambiar tu método de pago en la sección 'Opciones de pago' de tu cuenta.",
+                        "Accede a 'Métodos de pago' en tu perfil para actualizar tus detalles.",
+                        "Selecciona 'Modificar método de pago' en la sección de 'Facturación'.",
+                        "Si tienes problemas para actualizar tu información, contáctanos para asistencia.",
+                        "Recuerda guardar los cambios después de actualizar el método de pago."
+                    ]
+                },
+                {
+                    "tag": "Preguntas sobre tarifas",
+                    "patterns": [
+                        "Quiero saber más sobre las tarifas",
+                        "¿Cuánto cuesta el servicio?",
+                        "Tengo dudas sobre los precios",
+                        "¿Dónde puedo ver las tarifas actuales?",
+                        "Quiero entender cómo se calculan las tarifas",
+                        "Necesito más información sobre las tarifas"
+                    ],
+                    "responses": [
+                        "Puedes consultar las tarifas actuales en la sección 'Planes y Precios' de nuestra página web.",
+                        "Para más detalles sobre los costos, revisa el apartado de tarifas en tu cuenta.",
+                        "Las tarifas varían según el servicio. Contáctanos si necesitas información específica.",
+                        "Puedes acceder a una lista detallada de tarifas desde tu perfil en la sección 'Facturación'.",
+                        "Si tienes dudas sobre una tarifa específica, no dudes en preguntar."
+                    ]
+                },
+                {
+                    "tag": "Historial de pagos",
+                    "patterns": [
+                        "Quiero revisar mi historial de pagos",
+                        "¿Dónde puedo ver mis pagos anteriores?",
+                        "Necesito el detalle de mis pagos",
+                        "¿Cómo consulto mi historial de facturación?",
+                        "Quiero verificar pagos antiguos",
+                        "¿Puedo descargar el historial de pagos?"
+                    ],
+                    "responses": [
+                        "Revisa tu historial de pagos en 'Mi cuenta' > 'Facturación'.",
+                        "Puedes acceder a tus pagos anteriores desde la sección 'Historial de pagos' en tu perfil.",
+                        "Descarga el detalle de tus pagos en formato PDF desde la sección de facturación.",
+                        "En tu perfil encontrarás la opción 'Historial de pagos' con todos los detalles.",
+                        "Si tienes alguna duda sobre un pago en tu historial, contáctanos para más información."
+                    ]
+                },
+                {
+                    "tag": "otro tipo de problema",
+                    "patterns": [
+                        "Tengo un problema diferente",
+                        "Mi problema no está en esta lista",
+                        "Quiero reportar otro tipo de inconveniente",
+                        "¿Pueden ayudarme con algo distinto?",
+                        "Tengo una consulta fuera de los temas mencionados",
+                        "Necesito ayuda con algo más"
+                    ],
+                    "responses": [
+                        "Por favor, descríbenos el problema y haremos lo posible por ayudarte.",
+                        "Indícanos más detalles sobre el inconveniente y lo revisaremos.",
+                        "Lamentamos la confusión. ¿Podrías proporcionarnos más información sobre el problema?",
+                        "Estamos aquí para ayudarte. Cuéntanos más sobre tu situación.",
+                        "No te preocupes, investigaremos cómo resolverlo."
+                    ]
+                },
+                {
+                    "tag": "hablar con un asesor",
+                    "patterns": [
+                        "Quiero hablar con un asesor",
+                        "¿Puedo comunicarme con soporte técnico?",
+                        "Necesito atención personalizada",
+                        "Quiero contactar a un representante",
+                        "¿Cómo puedo hablar con alguien del equipo de soporte?",
+                        "Quiero comunicarme directamente con un asesor"
+                    ],
+                    "responses": [
+                        "Para hablar con un asesor, puedes llamarnos al número de soporte indicado en nuestra página web.",
+                        "Contacta a nuestro equipo de soporte técnico a través del chat en vivo.",
+                        "Un representante estará disponible para atenderte en breve. Por favor, espera unos momentos.",
+                        "Puedes enviarnos un correo detallando tu problema y un asesor te responderá pronto.",
+                        "Estamos aquí para asistirte. ¿Prefieres comunicarte por teléfono o correo electrónico?"
+                    ]
+                },
+                {
+                    "tag": "solucioné el problema, gracias",
+                    "patterns": [
+                        "Gracias, ya solucioné mi problema",
+                        "No necesito más ayuda, gracias",
+                        "Solucioné el problema por mi cuenta",
+                        "Todo está resuelto, muchas gracias",
+                        "Gracias por la atención, ya está todo bien",
+                        "Ya no tengo inconvenientes, gracias"
+                    ],
+                    "responses": [
+                        "¡Nos alegra saber que lo resolviste! Estamos aquí para cualquier consulta futura.",
+                        "Perfecto, nos da gusto que el problema esté solucionado. ¡Gracias por contactarnos!",
+                        "Si necesitas algo más en el futuro, no dudes en buscar ayuda nuevamente.",
+                        "¡Qué bien que todo se resolvió! Estamos aquí para cualquier otra consulta.",
+                        "Gracias por avisarnos. ¡Estamos aquí para ayudarte cuando lo necesites!"
+                    ]
+                }
+            ]
+        },
+        {
+            "tag": "Planes y Servicios",
+            "patterns": [
+                "Quiero saber más sobre sus planes",
+                "¿Qué servicios ofrecen?",
+                "Explícame los planes disponibles",
+                "Quiero contratar un servicio",
+                "¿Cómo puedo cambiar de plan?",
+                "¿Cuáles son los beneficios de cada plan?",
+                "Deseo información sobre sus servicios",
+                "Quiero actualizar mi plan actual",
+                "¿Qué incluye cada uno de los planes?",
+                "¿Puedo combinar varios servicios en un plan?"
+            ],
+            "responses": [
+                "Ofrecemos una variedad de planes diseñados para adaptarse a tus necesidades. Consulta nuestra página de 'Planes y Servicios' para más detalles.",
+                "Puedes cambiar o contratar un plan accediendo a la sección 'Planes' desde tu cuenta.",
+                "Cada plan tiene beneficios específicos. Te recomiendo revisar las características en nuestra página web o contactarnos para más información.",
+                "Si deseas actualizar tu plan, selecciona 'Actualizar plan' en tu perfil y sigue las instrucciones.",
+                "Nuestros servicios incluyen opciones personalizables. ¿Te gustaría que te ayudemos a elegir el mejor para ti?",
+                "Para combinar servicios o personalizar un plan, por favor contáctanos directamente.",
+                "Consulta nuestra tabla comparativa de planes para conocer todos los beneficios que ofrecemos.",
+                "Puedes gestionar tus servicios y planes actuales desde tu cuenta en la sección de configuración.",
+                "Si tienes dudas específicas sobre un plan, no dudes en preguntarnos. Estamos aquí para ayudarte.",
+                "Te invitamos a explorar nuestras opciones de planes y servicios en nuestro portal. ¿Te gustaría que te guiemos?"
+            ],
+            "sub_intents": [
+                {
+                    "tag": "Consultar planes disponibles",
+                    "patterns": [
+                        "Quiero conocer los planes disponibles",
+                        "¿Qué planes ofrecen?",
+                        "Explícame los planes actuales",
+                        "¿Cuáles son las opciones de planes?",
+                        "Quiero revisar los planes que tienen",
+                        "Muéstrame los planes disponibles"
+                    ],
+                    "responses": [
+                        "Puedes consultar los planes disponibles en la sección de 'Planes' en nuestro sitio web.",
+                        "Te invitamos a explorar nuestra tabla de planes para encontrar el que mejor se adapte a tus necesidades.",
+                        "Visita la página de 'Planes y Servicios' para ver todas las opciones que ofrecemos.",
+                        "Nuestros planes están diseñados para diferentes necesidades. ¿Te gustaría que te ayudemos a elegir uno?",
+                        "Si necesitas más detalles sobre los planes, contáctanos y te daremos toda la información."
+                    ]
+                },
+                {
+                    "tag": "Cambiar mi plan actual",
+                    "patterns": [
+                        "Quiero cambiar mi plan",
+                        "¿Cómo puedo actualizar mi plan?",
+                        "Deseo modificar mi plan actual",
+                        "Necesito cambiarme a otro plan",
+                        "Quiero un plan diferente",
+                        "¿Es posible cambiar de plan?"
+                    ],
+                    "responses": [
+                        "Para cambiar tu plan, accede a la sección 'Planes' en tu cuenta y selecciona 'Cambiar plan'.",
+                        "Puedes modificar tu plan actual desde tu perfil en la opción 'Actualizar plan'.",
+                        "Selecciona el plan al que deseas cambiar y sigue las instrucciones en la sección de configuración.",
+                        "Si necesitas ayuda para cambiar tu plan, contáctanos directamente y lo gestionaremos por ti.",
+                        "Revisa las opciones de cambio de plan en tu cuenta o consúltanos para más asistencia."
+                    ]
+                },
+                {
+                    "tag": "Añadir servicios adicionales",
+                    "patterns": [
+                        "Quiero agregar servicios adicionales",
+                        "¿Cómo puedo añadir más servicios?",
+                        "Deseo incluir un servicio adicional",
+                        "Necesito contratar un servicio extra",
+                        "¿Qué servicios adicionales puedo agregar?",
+                        "Quiero complementar mi plan con más servicios"
+                    ],
+                    "responses": [
+                        "Para añadir servicios adicionales, visita la sección 'Servicios adicionales' en tu cuenta.",
+                        "Consulta nuestras opciones de servicios adicionales en nuestro sitio web y selecciona los que necesites.",
+                        "Puedes contratar servicios extra desde la opción 'Añadir servicios' en tu perfil.",
+                        "Si deseas más información sobre servicios adicionales, contáctanos y te ayudaremos.",
+                        "Nuestros servicios adicionales están diseñados para complementar tu plan. Revisa las opciones disponibles."
+                    ]
+                },
+                {
+                    "tag": "Información sobre promociones",
+                    "patterns": [
+                        "Quiero saber sobre promociones",
+                        "¿Qué ofertas tienen actualmente?",
+                        "Explícame las promociones vigentes",
+                        "¿Hay descuentos disponibles?",
+                        "Muéstrame las promociones que tienen",
+                        "¿Qué beneficios adicionales están ofreciendo?"
+                    ],
+                    "responses": [
+                        "Puedes consultar nuestras promociones vigentes en la sección de 'Promociones' en nuestro sitio web.",
+                        "Revisar las promociones actuales es fácil. Accede a tu cuenta y selecciona 'Promociones'.",
+                        "Ofrecemos descuentos y beneficios especiales. Contáctanos para más información.",
+                        "Mantente actualizado sobre nuestras ofertas en la página principal de nuestra plataforma.",
+                        "Si tienes preguntas específicas sobre promociones, estamos aquí para ayudarte."
+                    ]
+                },
+                {
+                    "tag": "Baja de servicios",
+                    "patterns": [
+                        "Quiero darme de baja",
+                        "¿Cómo cancelo mi plan?",
+                        "Deseo dar de baja un servicio",
+                        "Necesito cancelar mi suscripción",
+                        "¿Qué hago para darme de baja?",
+                        "Quiero terminar con un servicio"
+                    ],
+                    "responses": [
+                        "Para darte de baja, accede a la sección 'Mi cuenta' y selecciona 'Cancelar servicios'.",
+                        "Puedes gestionar la baja de tus servicios desde tu perfil en la opción correspondiente.",
+                        "Contáctanos si necesitas ayuda para cancelar tu plan o servicio.",
+                        "Te guiaremos en el proceso de baja. Por favor, contáctanos directamente.",
+                        "Revisa los términos de tu contrato antes de proceder con la baja de servicios."
+                    ]
+                },
+                {
+                    "tag": "otro tipo de problema",
+                    "patterns": [
+                        "Tengo un problema diferente",
+                        "Esto no resuelve mi problema",
+                        "Mi consulta no está aquí",
+                        "Necesito ayuda con algo más",
+                        "Quiero reportar un problema diferente",
+                        "Esto no es lo que buscaba"
+                    ],
+                    "responses": [
+                        "Entendemos que tu consulta puede ser diferente. Por favor, explícanos más detalles.",
+                        "Estamos aquí para ayudarte con cualquier problema. Cuéntanos más sobre lo que necesitas.",
+                        "Lamentamos que no hayas encontrado lo que buscabas. Estamos aquí para resolver cualquier duda.",
+                        "Contáctanos directamente para explicarnos tu problema y ofrecerte la mejor solución.",
+                        "Si necesitas ayuda personalizada, estamos disponibles para atenderte."
+                    ]
+                },
+                {
+                    "tag": "hablar con un asesor",
+                    "patterns": [
+                        "Quiero hablar con un asesor",
+                        "¿Puedo hablar con alguien?",
+                        "Necesito asistencia personalizada",
+                        "¿Me puedes transferir a un agente?",
+                        "Deseo contactar con soporte técnico",
+                        "Quiero comunicarme con un representante"
+                    ],
+                    "responses": [
+                        "Un asesor estará contigo en breve para ayudarte.",
+                        "Por favor, espera un momento mientras te conectamos con un representante.",
+                        "Estamos transfiriendo tu consulta a un agente. Por favor, mantente en línea.",
+                        "Un miembro de nuestro equipo de soporte estará contigo pronto.",
+                        "Gracias por tu paciencia. Te conectaremos con un asesor lo antes posible."
+                    ]
+                },
+                {
+                    "tag": "solucioné el problema, gracias",
+                    "patterns": [
+                        "Gracias, ya solucioné mi problema",
+                        "No necesito más ayuda",
+                        "Eso era todo, gracias",
+                        "Ya está resuelto, gracias",
+                        "Gracias por la ayuda, todo bien ahora",
+                        "No tengo más consultas, gracias"
+                    ],
+                    "responses": [
+                        "¡Qué bueno que hayas solucionado el problema! Estamos aquí para cualquier otra consulta.",
+                        "Nos alegra saber que todo está resuelto. ¡Que tengas un excelente día!",
+                        "Gracias por contactarnos. Recuerda que siempre puedes volver si necesitas algo más.",
+                        "¡Perfecto! Estamos disponibles para cualquier consulta futura.",
+                        "Nos alegra haberte ayudado. ¡Hasta la próxima!"
+                    ]
+                }
+            ]
+        },
+        {
+            "tag": "ayuda general",
+            "patterns": [
+                "Necesito ayuda",
+                "¿Cómo puedo obtener soporte?",
+                "Quiero información general",
+                "¿Me puedes ayudar con algo?",
+                "Busco asistencia",
+                "¿Dónde encuentro más información?",
+                "Tengo una consulta general",
+                "Ayúdame, por favor",
+                "No sé cómo proceder",
+                "Quiero orientación"
+            ],
+            "responses": [
+                "Estamos aquí para ayudarte con cualquier consulta que tengas. ¿En qué específicamente necesitas apoyo?",
+                "Para cualquier duda o problema, no dudes en preguntarnos. ¿Cómo puedo asistirte?",
+                "Ofrecemos soporte para una amplia variedad de temas. Por favor, dime qué necesitas.",
+                "Puedes contar con nosotros para resolver tus dudas. ¿Qué información estás buscando?",
+                "Si necesitas más detalles sobre nuestros servicios o soporte técnico, estamos a tu disposición.",
+                "Dinos más sobre tu consulta y te ofreceremos la mejor solución posible.",
+                "Revisemos juntos tu duda. Cuéntanos más sobre lo que necesitas saber.",
+                "Te ayudaremos a resolver cualquier inconveniente. Por favor, explícame tu problema.",
+                "Para obtener asistencia completa, puedes acceder a nuestra sección de ayuda en línea o consultarnos aquí.",
+                "Estamos listos para orientarte en lo que necesites. ¿En qué puedo ayudarte hoy?"
+            ],
+            "sub_intents": [
+                {
+                    "tag": "Consultar preguntas frecuentes",
+                    "patterns": [
+                        "¿Dónde puedo consultar las preguntas frecuentes?",
+                        "Quiero leer las FAQ",
+                        "¿Tienen una sección de preguntas frecuentes?",
+                        "Busco respuestas rápidas en las preguntas frecuentes",
+                        "Consulta de preguntas comunes",
+                        "¿Dónde encuentro las respuestas comunes?",
+                        "Quiero ver la sección de FAQ",
+                        "Acceso a preguntas frecuentes",
+                        "¿Hay un lugar con preguntas resueltas?",
+                        "Ayuda con preguntas frecuentes"
+                    ],
+                    "responses": [
+                        "Puedes consultar nuestras preguntas frecuentes en la sección de ayuda en nuestra página web.",
+                        "Visita nuestra sección de preguntas frecuentes para respuestas rápidas.",
+                        "Tenemos una lista de preguntas comunes que podría ayudarte. ¿Te muestro cómo acceder a ella?",
+                        "La sección de preguntas frecuentes contiene respuestas útiles a problemas comunes.",
+                        "Encuentra las FAQ en nuestra plataforma para resolver tus dudas de forma sencilla.",
+                        "¿Buscas respuestas rápidas? Revisa las preguntas frecuentes en nuestro sitio.",
+                        "Para consultas comunes, las preguntas frecuentes son una gran opción. ¿Te ayudo a encontrarlas?",
+                        "Accede a las preguntas frecuentes desde el menú de soporte en nuestra página principal.",
+                        "Muchas de las dudas frecuentes están ya resueltas en nuestra sección de preguntas frecuentes.",
+                        "Consulta nuestras FAQ para encontrar soluciones inmediatas a problemas comunes."
+                    ]
+                },
+                {
+                    "tag": "Chat con un asesor humano",
+                    "patterns": [
+                        "Quiero hablar con un asesor humano",
+                        "Necesito atención personalizada",
+                        "¿Puedo chatear con un asesor real?",
+                        "Ayuda con un asesor humano",
+                        "Conectar con un agente",
+                        "Quiero hablar con soporte humano",
+                        "Asistencia de un agente humano",
+                        "Necesito ayuda directa con un asesor",
+                        "Chat con un agente real",
+                        "Soporte con atención humana"
+                    ],
+                    "responses": [
+                        "Conéctate con un asesor humano a través de nuestra opción de chat en vivo.",
+                        "Puedes acceder a la atención personalizada mediante nuestro servicio de chat.",
+                        "Un agente humano estará encantado de ayudarte. Inicia un chat en vivo desde nuestra página.",
+                        "Para hablar con un asesor real, selecciona la opción 'Chat en vivo' en nuestra plataforma.",
+                        "Obtén ayuda personalizada de un agente humano. ¿Quieres que te explique cómo contactarlos?",
+                        "Estamos aquí para ofrecerte soporte personalizado a través del chat con un asesor.",
+                        "Hablar con un agente real es sencillo. Accede al chat en vivo para más información.",
+                        "Un asesor humano puede ayudarte directamente. ¿Te guío para iniciar el chat?",
+                        "Conecta con un agente humano para resolver tus dudas a través de nuestro chat.",
+                        "Inicia un chat con uno de nuestros agentes para asistencia inmediata y personalizada."
+                    ]
+                },
+                {
+                    "tag": "Horarios y sucursales",
+                    "patterns": [
+                        "Quiero saber los horarios de atención",
+                        "¿Cuáles son sus horarios de atención?",
+                        "¿Dónde están sus sucursales?",
+                        "Necesito información de horarios y oficinas",
+                        "¿Tienen una sucursal cercana?",
+                        "Consulta de horarios de atención",
+                        "Información sobre oficinas disponibles",
+                        "Sucursales y horarios, por favor",
+                        "¿Cuáles son las ubicaciones de las sucursales?",
+                        "Horarios de atención al cliente"
+                    ],
+                    "responses": [
+                        "Nuestros horarios de atención y ubicaciones de sucursales están disponibles en nuestra página web.",
+                        "Para conocer los horarios y sucursales, visita la sección 'Contacto' en nuestra plataforma.",
+                        "Puedes encontrar la sucursal más cercana y los horarios en nuestro mapa interactivo.",
+                        "Estamos disponibles en diferentes horarios según la sucursal. ¿Te ayudo a encontrar uno específico?",
+                        "Consulta los horarios de atención y ubicaciones de oficinas en la sección de 'Ayuda' en línea.",
+                        "Para más información sobre sucursales, contáctanos o revisa nuestra página oficial.",
+                        "Nuestros horarios están diseñados para adaptarse a tus necesidades. Revisa las opciones disponibles.",
+                        "La información sobre sucursales y horarios se encuentra en nuestra plataforma de servicio.",
+                        "Revisa nuestras oficinas cercanas y sus horarios directamente desde nuestro sitio.",
+                        "Para detalles sobre horarios y oficinas, estamos aquí para asistirte. ¿Cómo puedo ayudarte?"
+                    ]
+                },
+                {
+                    "tag": "Solicitar una llamada de soporte",
+                    "patterns": [
+                        "Quiero que me llamen para ayuda",
+                        "¿Puedo solicitar una llamada de soporte?",
+                        "Necesito que alguien me llame",
+                        "Ayuda por llamada, por favor",
+                        "Solicitud de llamada de atención al cliente",
+                        "Necesito soporte vía telefónica",
+                        "¿Pueden llamarme para ayudarme?",
+                        "Quiero asistencia por llamada",
+                        "Llamada de soporte, por favor",
+                        "Solicito ayuda por teléfono"
+                    ],
+                    "responses": [
+                        "Puedes solicitar una llamada de soporte a través de nuestra página en la sección 'Contacto'.",
+                        "Para obtener asistencia telefónica, agenda una llamada desde nuestra plataforma.",
+                        "Estamos disponibles para llamarte y ayudarte con tu problema. Solicita una llamada en línea.",
+                        "Solicita una llamada de soporte en nuestra página y te contactaremos lo antes posible.",
+                        "Un agente te llamará para asistirte. Por favor, indícanos tu disponibilidad.",
+                        "Agendar una llamada de soporte es fácil. Ve a la opción 'Ayuda' y selecciona 'Solicitar llamada'.",
+                        "Estamos aquí para ayudarte por teléfono. ¿Te muestro cómo solicitar una llamada?",
+                        "Puedes recibir soporte telefónico solicitando una llamada en nuestra página principal.",
+                        "Para asistencia inmediata por llamada, completa el formulario de solicitud en línea.",
+                        "Solicita una llamada de nuestro equipo de soporte directamente desde tu cuenta en nuestra plataforma."
+                    ]
+                },
+                {
+                    "tag": "Políticas de la empresa",
+                    "patterns": [
+                        "Quiero conocer las políticas de la empresa",
+                        "Consulta de términos y condiciones",
+                        "Información sobre políticas de uso",
+                        "¿Dónde encuentro las políticas de privacidad?",
+                        "Quiero saber las normativas de la empresa",
+                        "Detalles sobre las políticas de atención",
+                        "Políticas internas de la empresa",
+                        "Consulta de condiciones de servicio",
+                        "Quiero leer las reglas y normativas",
+                        "¿Cuáles son las políticas de la empresa?"
+                    ],
+                    "responses": [
+                        "Puedes consultar nuestras políticas en la sección 'Términos y condiciones' de nuestra página web.",
+                        "Toda la información sobre políticas de privacidad y uso está disponible en nuestra plataforma.",
+                        "Para detalles sobre nuestras políticas, revisa la sección 'Políticas' en nuestra página.",
+                        "Encuentra nuestras políticas de servicio y privacidad en el enlace proporcionado en tu cuenta.",
+                        "Las normativas de la empresa están disponibles para tu revisión en nuestro sitio oficial.",
+                        "Consulta nuestras políticas en línea para mayor claridad sobre nuestras condiciones.",
+                        "Toda la información sobre términos y condiciones está detallada en nuestra página principal.",
+                        "Revisa las reglas y normativas directamente desde la sección de ayuda.",
+                        "Estamos aquí para responder preguntas sobre nuestras políticas. ¿Cómo puedo asistirte?",
+                        "Para mayor transparencia, nuestras políticas están disponibles en el menú de soporte."
+                    ]
+                },
+                {
+                    "tag": "otro tipo de problema",
+                    "patterns": [
+                        "Tengo un problema diferente",
+                        "Mi consulta no encaja en las categorías anteriores",
+                        "Quiero reportar algo distinto",
+                        "Ayuda con otro tema",
+                        "Soporte para otro tipo de problema",
+                        "Tengo un caso particular",
+                        "¿Cómo puedo explicar un problema diferente?",
+                        "Consulta fuera de las categorías",
+                        "Asistencia para algo diferente",
+                        "Mi problema es diferente a los mencionados"
+                    ],
+                    "responses": [
+                        "Entendemos que tu problema puede ser único. Cuéntanos más para ofrecerte una solución.",
+                        "Dinos más sobre tu caso para asistirte de la mejor manera posible.",
+                        "Estamos aquí para resolver cualquier tipo de inconveniente. ¿Puedes darnos más detalles?",
+                        "Tu consulta será atendida. Por favor, explica el problema que estás enfrentando.",
+                        "Estamos disponibles para ayudarte con cualquier problema. Explícanos más al respecto.",
+                        "Aunque no encaje en las categorías anteriores, podemos ayudarte. Dinos de qué se trata.",
+                        "Por favor, comparte más información sobre tu caso para ofrecerte el mejor soporte.",
+                        "Estamos atentos a cualquier tipo de problema que tengas. ¿Qué necesitas resolver?",
+                        "Cuéntanos los detalles de tu problema para encontrar una solución adecuada.",
+                        "Explícanos tu situación para que podamos ofrecerte asistencia personalizada."
+                    ]
+                },
+                {
+                    "tag": "hablar con un asesor",
+                    "patterns": [
+                        "Quiero hablar con un asesor",
+                        "¿Puedo contactar con alguien?",
+                        "Necesito atención directa",
+                        "Conectar con un asesor",
+                        "Soporte por un representante",
+                        "Asistencia de un asesor",
+                        "Hablar con un agente de soporte",
+                        "Necesito asistencia de un asesor",
+                        "Quiero ayuda de un representante",
+                        "¿Puedo hablar con soporte directo?"
+                    ],
+                    "responses": [
+                        "Para hablar con un asesor, selecciona la opción de contacto en nuestra plataforma.",
+                        "Estamos aquí para conectarte con un asesor. ¿Te ayudo a iniciar el contacto?",
+                        "Puedes hablar con un agente seleccionando 'Asistencia directa' en nuestro menú de soporte.",
+                        "Un asesor está disponible para ayudarte. Inicia el contacto desde nuestra página de ayuda.",
+                        "Conéctate con un asesor desde el chat o mediante nuestra opción de llamada.",
+                        "Para asistencia directa, puedes contactar con un asesor disponible en línea.",
+                        "Hablar con un agente es fácil. Selecciona 'Contacto' en nuestra plataforma.",
+                        "Un asesor puede resolver tus dudas. ¿Te muestro cómo conectarte con uno?",
+                        "Estamos disponibles para atenderte personalmente. ¿Cómo prefieres que te contactemos?",
+                        "Conéctate ahora con un asesor para resolver tu consulta de inmediato."
+                    ]
+                },
+                {
+                    "tag": "solucioné el problema, gracias",
+                    "patterns": [
+                        "Ya resolví mi problema",
+                        "Gracias, todo está solucionado",
+                        "No necesito más ayuda",
+                        "He solucionado el problema",
+                        "Mi consulta fue resuelta",
+                        "Gracias por la ayuda, ya no tengo problemas",
+                        "No necesito más asistencia",
+                        "El problema fue solucionado, gracias",
+                        "Ya no tengo dudas, gracias",
+                        "Gracias, todo quedó claro"
+                    ],
+                    "responses": [
+                        "¡Nos alegra saber que tu problema está resuelto! Si necesitas algo más, no dudes en contactarnos.",
+                        "Gracias por informarnos. Siempre estamos aquí para ayudarte en el futuro.",
+                        "Nos complace saber que ya no tienes problemas. ¡Que tengas un excelente día!",
+                        "Es un gusto saber que todo está en orden. ¡Gracias por contactarnos!",
+                        "Gracias por tu tiempo. No dudes en regresar si necesitas asistencia nuevamente.",
+                        "Estamos felices de que hayas resuelto tu consulta. ¡Hasta la próxima!",
+                        "Gracias por confiar en nosotros. ¡Que tengas un buen día!",
+                        "Nos complace saber que tu consulta fue resuelta. ¡Hasta pronto!",
+                        "Es un placer haber podido ayudarte. ¡Gracias por informarnos!",
+                        "¡Perfecto! Siempre puedes contar con nosotros para futuras consultas."
+                    ]
+                }
             ]
         },
         {
