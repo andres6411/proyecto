@@ -3,6 +3,7 @@
         {
             "tag": "saludo",
             "patterns": [
+                "saludo",
                 "Hola",
                 "holi",
                 "Buenas",
@@ -28,11 +29,13 @@
                 "¡Hola! Estoy aquí para cualquier consulta que tengas.",
                 "¡Un gusto saludarte! ¿Cómo puedo ayudarte el día de hoy?",
                 "¡Hey! ¿En qué necesitas apoyo?"
-            ]
+            ],
+            "path":"chatbot_model.h5"
         },
         {
-            "tag": "problema_conexion",
+            "tag": "problema conexion",
             "patterns": [
+                "problemas conexión",
                 "No tengo conexión",
                 "No puedo conectarme",
                 "Hay problemas de conexión",
@@ -58,8 +61,9 @@
             ],
             "sub_intents": [
                 {
-                    "tag": "Lentitud_en_la_conexion",
+                    "tag": "Lentitud en la conexion",
                     "patterns": [
+                        "Lentitud en la conexion",
                         "La conexión está muy lenta",
                         "La red está muy lenta",
                         "Internet muy lento",
@@ -75,8 +79,9 @@
                     ]
                 },
                 {
-                    "tag": "Corte_total_del_servicio",
+                    "tag": "Corte total del servicio",
                     "patterns": [
+                        "Corte total del servicio",
                         "Se ha caído el servicio",
                         "No hay internet",
                         "La conexión no funciona",
@@ -92,8 +97,9 @@
                     ]
                 },
             {
-                "tag": "Problemas_con_Wi-Fi",
+                "tag": "Problemas con Wi-Fi",
                 "patterns": [
+                    "Problemas con Wi-Fi",
                     "No puedo conectar mi dispositivo al Wi-Fi",
                     "El Wi-Fi no funciona",
                     "No se conecta al Wi-Fi",
@@ -109,8 +115,9 @@
                 ]
             },
                 {
-                    "tag": "Configuracion_del_modem_router",
+                    "tag": "Configuracion del modem router",
                     "patterns": [
+                        "Configuracion del modem router",
                         "No sé cómo configurar mi módem",
                         "Cómo configurar el router",
                         "Necesito ayuda con la configuración del módem",
@@ -126,8 +133,9 @@
                     ]
                 },
                 {
-                    "tag": "Diagnostico_de_la_red",
+                    "tag": "Diagnostico de la red",
                     "patterns": [
+                        "Diagnostico de la red",
                         "¿Cómo diagnostico mi red?",
                         "Tengo problemas con la conexión, ¿cómo lo soluciono?",
                         "¿Hay algún problema con mi red?",
@@ -143,8 +151,9 @@
                     ]
                 },
                 {
-                    "tag": "Otro_tipo_de_problema",
+                    "tag": "Otro tipo de problema",
                     "patterns": [
+                        "Otro tipo de problema",
                         "Tengo un problema distinto",
                         "Mi problema no está en la lista",
                         "No sé qué está pasando",
@@ -157,11 +166,13 @@
                         "Voy a ayudarte con eso. Cuéntame un poco más sobre el problema que estás enfrentando.",
                         "Por favor, detállame el inconveniente y veremos cómo solucionarlo.",
                         "Intentemos resolverlo juntos. Explícame qué sucede."
-                    ]
+                    ],
+                    "path":"chatbot_model.h5"
                 },
                 {
-                    "tag": "Hablar_con_un_asesor",
+                    "tag": "Hablar con un asesor",
                     "patterns": [
+                        "Hablar con un asesor",
                         "Quiero hablar con un asesor",
                         "Necesito hablar con un experto",
                         "¿Puedo hablar con alguien?",
@@ -177,8 +188,9 @@
                     ]
                 },
                 {
-                    "tag": "Solucione_el_problema_gracias",
+                    "tag": "Solucione el problema gracias",
                     "patterns": [
+                        "Solucione el problema gracias",
                         "¡Todo solucionado, gracias!",
                         "El problema se resolvió, gracias",
                         "¡Ya todo está bien, muchas gracias!",
@@ -193,11 +205,13 @@
                         "¡Genial! Si necesitas asistencia en el futuro, no dudes en volver. ¡Hasta pronto!"
                     ]
                 }
-            ]
+            ],
+            "path":"problema conexion_model.h5"
         },
         {
-            "tag": "problemas_con_telefonia",
+            "tag": "problemas con telefonia",
             "patterns": [
+                "problemas con telefonia",
                 "Tengo problemas con mi línea telefónica",
                 "No puedo hacer ni recibir llamadas",
                 "La señal de mi teléfono es muy débil",
@@ -223,8 +237,9 @@
             ,
             "sub_intents": [
                 {
-                    "tag": "Llamadas_caidas",
+                    "tag": "Llamadas caidas",
                     "patterns": [
+                        "Llamadas caidas",
                         "Mis llamadas se caen",
                         "Las llamadas se interrumpen",
                         "No puedo mantener la llamada",
@@ -240,8 +255,9 @@
                     ]
                 },
                 {
-                    "tag": "Interferencia_en_las_llamadas",
+                    "tag": "Interferencia en las llamadas",
                     "patterns": [
+                        "Interferencia en las llamadas",
                         "Escucho interferencias en las llamadas",
                         "Hay ruidos en las llamadas",
                         "Mi llamada tiene interferencia",
@@ -257,8 +273,9 @@
                     ]
                 },
                 {
-                    "tag": "Problemas_con_el_buzon_de_voz",
+                    "tag": "Problemas con el buzon de voz",
                     "patterns": [
+                        "Problemas con el buzon de voz",
                         "No puedo acceder a mi buzón de voz",
                         "Mi buzón de voz no funciona",
                         "No recibo notificaciones de mensajes en mi buzón",
@@ -274,8 +291,9 @@
                     ]
                 },
                 {
-                    "tag": "No_puedo_realizar_llamadas",
+                    "tag": "No puedo realizar llamadas",
                     "patterns": [
+                        "No puedo realizar llamadas",
                         "No puedo hacer llamadas",
                         "No puedo realizar una llamada",
                         "Las llamadas no se conectan",
@@ -291,8 +309,9 @@
                     ]
                 },
                 {
-                    "tag": "No_puedo_recibir_llamadas",
+                    "tag": "No puedo recibir llamadas",
                     "patterns": [
+                        "No puedo recibir llamadas",
                         "No recibo llamadas",
                         "Las llamadas no llegan a mi teléfono",
                         "No me llaman",
@@ -308,8 +327,9 @@
                     ]
                 },
                 {
-                    "tag": "Otro_tipo_de_problema",
+                    "tag": "Otro tipo de problema",
                     "patterns": [
+                        "Otro tipo de problema",
                         "Tengo un problema diferente con las llamadas",
                         "Mi problema no está en la lista de llamadas",
                         "No sé qué pasa con mis llamadas",
@@ -322,11 +342,13 @@
                         "Explícame mejor lo que sucede con tus llamadas para que podamos encontrar la mejor solución.",
                         "Por favor, detállame el inconveniente y con gusto te asistiré.",
                         "Estoy aquí para ayudarte. Cuéntame un poco más sobre el problema que estás enfrentando con las llamadas."
-                    ]
+                    ],
+                    "path":"chatbot_model.h5"
                 },
                 {
-                    "tag": "Hablar_con_un_asesor",
+                    "tag": "Hablar con un asesor",
                     "patterns": [
+                        "Hablar con un asesor",
                         "Quiero hablar con un asesor sobre las llamadas",
                         "Necesito hablar con un agente",
                         "¿Puedo hablar con soporte técnico?",
@@ -342,8 +364,9 @@
                     ]
                 },
                 {
-                    "tag": "Solucione_el_problema_gracias",
+                    "tag": "Solucione el problema gracias",
                     "patterns": [
+                        "Solucione el problema gracias",
                         "¡Todo solucionado, gracias!",
                         "El problema con las llamadas ya se resolvió, gracias",
                         "¡Las llamadas ya funcionan bien, muchas gracias!",
@@ -358,11 +381,13 @@
                         "¡Excelente! Si en el futuro tienes algún otro inconveniente, no dudes en contactarnos nuevamente."
                     ]
                 }
-            ]
+            ],
+            "path":"problemas con telefonia_model.h5"
         },
         {
-            "tag": "problemas_con_television",
+            "tag": "problemas con television",
             "patterns": [
+                "problemas con television",
                 "No puedo ver la televisión",
                 "La señal de mi televisión está perdida",
                 "La televisión no enciende",
@@ -388,8 +413,9 @@
             ],
             "sub_intents": [
                 {
-                    "tag": "Sin_senal_en_el_decodificador",
+                    "tag": "Sin senal en el decodificador",
                     "patterns": [
+                        "Sin senal en el decodificador",
                         "No tengo señal en el decodificador",
                         "El decodificador no recibe señal",
                         "No veo nada en la televisión",
@@ -405,8 +431,9 @@
                     ]
                 },
                 {
-                    "tag": "Pantalla_congelada_o_pixelada",
+                    "tag": "Pantalla congelada o pixelada",
                     "patterns": [
+                        "Pantalla congelada o pixelada",
                         "La pantalla está congelada",
                         "La imagen está pixelada",
                         "La televisión se congela",
@@ -422,8 +449,9 @@
                     ]
                 },
                 {
-                    "tag": "Problemas_con_canales_especificos",
+                    "tag": "Problemas con canales especificos",
                     "patterns": [
+                        "Problemas con canales especificos",
                         "No puedo ver un canal específico",
                         "Un canal no se ve bien",
                         "Un canal está fallando",
@@ -439,8 +467,9 @@
                     ]
                 },
                 {
-                    "tag": "Configuracion_del_control_remoto",
+                    "tag": "Configuracion del control remoto",
                     "patterns": [
+                        "Configuracion del control remoto",
                         "El control remoto no funciona",
                         "No puedo cambiar de canal con el control",
                         "El control remoto no responde",
@@ -456,8 +485,9 @@
                     ]
                 },
                 {
-                    "tag": "Actualizacion_del_sistema_de_TV",
+                    "tag": "Actualizacion del sistema de TV",
                     "patterns": [
+                        "Actualizacion del sistema de TV",
                         "Mi televisión no se actualiza",
                         "¿Cómo actualizo mi televisor?",
                         "La televisión no tiene la última actualización",
@@ -473,8 +503,9 @@
                     ]
                 },
                 {
-                    "tag": "Otro_tipo_de_problema",
+                    "tag": "Otro tipo de problema",
                     "patterns": [
+                        "Otro tipo de problema",
                         "Tengo otro problema con la televisión",
                         "Mi televisión tiene un inconveniente que no está listado",
                         "Tengo un problema técnico con la TV",
@@ -487,10 +518,11 @@
                         "Estoy aquí para ayudarte. Explícame mejor lo que sucede y buscaremos una solución.",
                         "Por favor, detállame el inconveniente y estaré encantado de asistirte.",
                         "Dime qué sucede exactamente con la televisión y te proporcionaré la mejor solución."
-                    ]
+                    ],
+                    "path":"chatbot_model.h5"
                 },
                 {
-                    "tag": "Hablar_con_un_asesor",
+                    "tag": "Hablar con un asesor",
                     "patterns": [
                         "Quiero hablar con un asesor sobre la televisión",
                         "Necesito ayuda de un experto en televisión",
@@ -507,7 +539,7 @@
                     ]
                 },
                 {
-                    "tag": "Solucione_el_problema_gracias",
+                    "tag": "Solucione el problema gracias",
                     "patterns": [
                         "¡Todo solucionado, gracias!",
                         "El problema con la televisión ya está resuelto, gracias",
@@ -523,7 +555,8 @@
                         "¡Qué bueno que todo esté solucionado! Si tienes alguna otra duda, no dudes en regresar."
                     ]
                 }
-            ]
+            ],
+            "path": "problemas con television_model.h5"
         },
         {
             "tag": "facturacion",
@@ -657,7 +690,8 @@
                         "Lamentamos la confusión. ¿Podrías proporcionarnos más información sobre el problema?",
                         "Estamos aquí para ayudarte. Cuéntanos más sobre tu situación.",
                         "No te preocupes, investigaremos cómo resolverlo."
-                    ]
+                    ],
+                    "path":"chatbot_model.h5"
                 },
                 {
                     "tag": "hablar con un asesor",
@@ -695,7 +729,8 @@
                         "Gracias por avisarnos. ¡Estamos aquí para ayudarte cuando lo necesites!"
                     ]
                 }
-            ]
+            ],
+            "path": "facturacion_model.h5"
         },
         {
             "tag": "Planes y Servicios",
@@ -830,11 +865,13 @@
                         "Lamentamos que no hayas encontrado lo que buscabas. Estamos aquí para resolver cualquier duda.",
                         "Contáctanos directamente para explicarnos tu problema y ofrecerte la mejor solución.",
                         "Si necesitas ayuda personalizada, estamos disponibles para atenderte."
-                    ]
+                    ],
+                    "path":"chatbot_model.h5"
                 },
                 {
                     "tag": "hablar con un asesor",
                     "patterns": [
+                        "Hablar con un asesor",
                         "Quiero hablar con un asesor",
                         "¿Puedo hablar con alguien?",
                         "Necesito asistencia personalizada",
@@ -853,6 +890,7 @@
                 {
                     "tag": "solucioné el problema, gracias",
                     "patterns": [
+                        "solucioné el problema, gracias",
                         "Gracias, ya solucioné mi problema",
                         "No necesito más ayuda",
                         "Eso era todo, gracias",
@@ -868,11 +906,13 @@
                         "Nos alegra haberte ayudado. ¡Hasta la próxima!"
                     ]
                 }
-            ]
+            ],
+            "path": "Planes y Servicios"
         },
         {
             "tag": "ayuda general",
             "patterns": [
+                "ayuda general",
                 "Necesito ayuda",
                 "¿Cómo puedo obtener soporte?",
                 "Quiero información general",
@@ -900,6 +940,7 @@
                 {
                     "tag": "Consultar preguntas frecuentes",
                     "patterns": [
+                        "Consultar preguntas frecuentes",
                         "¿Dónde puedo consultar las preguntas frecuentes?",
                         "Quiero leer las FAQ",
                         "¿Tienen una sección de preguntas frecuentes?",
@@ -927,6 +968,7 @@
                 {
                     "tag": "Chat con un asesor humano",
                     "patterns": [
+                        "Chat con un asesor humano",
                         "Quiero hablar con un asesor humano",
                         "Necesito atención personalizada",
                         "¿Puedo chatear con un asesor real?",
@@ -954,6 +996,7 @@
                 {
                     "tag": "Horarios y sucursales",
                     "patterns": [
+                        "Horarios y sucursales",
                         "Quiero saber los horarios de atención",
                         "¿Cuáles son sus horarios de atención?",
                         "¿Dónde están sus sucursales?",
@@ -981,6 +1024,7 @@
                 {
                     "tag": "Solicitar una llamada de soporte",
                     "patterns": [
+                        "Solicitar una llamada de soporte",
                         "Quiero que me llamen para ayuda",
                         "¿Puedo solicitar una llamada de soporte?",
                         "Necesito que alguien me llame",
@@ -1008,6 +1052,7 @@
                 {
                     "tag": "Políticas de la empresa",
                     "patterns": [
+                        "Políticas de la empresa",
                         "Quiero conocer las políticas de la empresa",
                         "Consulta de términos y condiciones",
                         "Información sobre políticas de uso",
@@ -1035,6 +1080,7 @@
                 {
                     "tag": "otro tipo de problema",
                     "patterns": [
+                        "otro tipo de problema",
                         "Tengo un problema diferente",
                         "Mi consulta no encaja en las categorías anteriores",
                         "Quiero reportar algo distinto",
@@ -1057,11 +1103,13 @@
                         "Estamos atentos a cualquier tipo de problema que tengas. ¿Qué necesitas resolver?",
                         "Cuéntanos los detalles de tu problema para encontrar una solución adecuada.",
                         "Explícanos tu situación para que podamos ofrecerte asistencia personalizada."
-                    ]
+                    ],
+                    "path":"chatbot_model.h5"
                 },
                 {
                     "tag": "hablar con un asesor",
                     "patterns": [
+                        "hablar con un asesor",
                         "Quiero hablar con un asesor",
                         "¿Puedo contactar con alguien?",
                         "Necesito atención directa",
@@ -1089,6 +1137,7 @@
                 {
                     "tag": "solucioné el problema, gracias",
                     "patterns": [
+                        "solucioné el problema, gracias",
                         "Ya resolví mi problema",
                         "Gracias, todo está solucionado",
                         "No necesito más ayuda",
@@ -1113,11 +1162,13 @@
                         "¡Perfecto! Siempre puedes contar con nosotros para futuras consultas."
                     ]
                 }
-            ]
+            ],
+            "path": "Planes y Servicios_model.h5"
         },
         {
             "tag": "despedida",
             "patterns": [
+                "despedida",
                 "Gracias",
                 "Eso es todo",
                 "Adiós",
