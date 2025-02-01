@@ -70,6 +70,6 @@ def get_response(intents_list, intents_json,model_path):
                     if j['tag'] == tag: # If the tag is equal to the tag of the intent
                         print(j)
                         print("\n\n\n\n\n  tag correcto  \n\n\n\n\n")
-                        result = random.choice(i['responses']) # Get a random response from the 
+                        result = random.choice(j['responses']) # Get a random response from the 
                         break # Break out of the loop
     return result # Return the response

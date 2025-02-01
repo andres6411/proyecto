@@ -60,15 +60,15 @@ if selected_option:
     insts = predict_class(selected_option, st.session_state.model_path)
     res = get_response(insts, intents, st.session_state.model_path)
 
+    with st.chat_message("assistant"):
+        st.markdown(res)
+    st.session_state.messages.append({"role": "assistant", "content": res})
+
     # Actualizar modelo si es necesario
     tag = next((item for item in intents["intents"] if item["tag"] == insts[0]['intent']), None)
     if tag and "path" in tag:
         st.session_state.model_path = tag["path"]
         st.rerun()  # Forzar una recarga para actualizar las opciones
-
-    with st.chat_message("assistant"):
-        st.markdown(res)
-    st.session_state.messages.append({"role": "assistant", "content": res})
 
 # Entrada adicional de texto
 if prompt := st.chat_input("¿Cómo puedo ayudarte?"):
@@ -80,6 +80,14 @@ if prompt := st.chat_input("¿Cómo puedo ayudarte?"):
     insts = predict_class(prompt, st.session_state.model_path)
     res = get_response(insts, intents, st.session_state.model_path)
 
+    
     with st.chat_message("assistant"):
         st.markdown(res)
     st.session_state.messages.append({"role": "assistant", "content": res})
+
+    # Actualizar modelo si es necesario
+    tag = next((item for item in intents["intents"] if item["tag"] == insts[0]['intent']), None)
+    if tag and "path" in tag:
+        st.session_state.model_path = tag["path"]
+        st.rerun()  # Forzar una recarga para actualizar las opciones
+

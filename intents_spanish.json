@@ -35,6 +35,7 @@
         {
             "tag": "problema conexion",
             "patterns": [
+                "problemas conexion",
                 "problemas conexión",
                 "No tengo conexión",
                 "No puedo conectarme",
