@@ -30,22 +30,24 @@ if st.session_state.first_message:
     st.session_state.messages.append({"role": "assistant", "content": "Hola, ¿cómo puedo ayudarte?"})
     st.session_state.first_message = False
 
-# Actualizar opciones dinámicamente según el modelo actual
-def update_options():
-    options = []
-    model_path = st.session_state.model_path
-    if model_path == "modelos/chatbot_model.h5":
-        for intent in intents['intents']:
-            options.append(intent["tag"])
-    else:
-        tag = next((item for item in intents['intents'] if item.get("path") == model_path), None)
-        if tag and "sub_intents" in tag:
-            for sub_intent in tag["sub_intents"]:
-                options.append(sub_intent["tag"])
-    st.session_state.options = options
+# # Actualizar opciones dinámicamente según el modelo actual
+# def update_options():
+options = []
+model_path = st.session_state.model_path
+print("\n\n\n\n\n\n\n modelo para pills: ",model_path, "\n\n\n\n\n\n\n\n\n\n")
+if model_path == "modelos/chatbot_model.h5":
+    for intent in intents['intents']:
+        options.append(intent["patterns"][0])
+    options.pop(0)
+else:
+    tag = next((item for item in intents['intents'] if item.get("path") == model_path), None)
+    if tag and "sub_intents" in tag:
+        for sub_intent in tag["sub_intents"]:
+            options.append(sub_intent["patterns"][0])
+st.session_state.options = options
 
 # Actualizar opciones al cargar
-update_options()
+# update_options()
 
 # Mostrar las pills dinámicamente
 selected_option = st.pills("Selecciona una opción:", st.session_state.options)
@@ -65,10 +67,17 @@ if selected_option:
     st.session_state.messages.append({"role": "assistant", "content": res})
 
     # Actualizar modelo si es necesario
-    tag = next((item for item in intents["intents"] if item["tag"] == insts[0]['intent']), None)
-    if tag and "path" in tag:
-        st.session_state.model_path = tag["path"]
-        st.rerun()  # Forzar una recarga para actualizar las opciones
+    if model_path == "modelos/chatbot_model.h5":
+        tag = next((item for item in intents["intents"] if item["tag"] == insts[0]['intent']), None)
+        if tag and "path" in tag:
+            st.session_state.model_path = tag["path"]
+            st.rerun()  # Forzar una recarga para actualizar las opciones
+    else:
+        tag = next((sub for item in intents["intents"] if "sub_intents" in item for sub in item["sub_intents"] if sub.get("tag") == insts[0]['intent']), None)
+        if tag and "path" in tag:
+            st.session_state.model_path = tag["path"]
+            st.rerun()  # Forzar una recarga para actualizar las opciones
+            
 
 # Entrada adicional de texto
 if prompt := st.chat_input("¿Cómo puedo ayudarte?"):
@@ -80,14 +89,21 @@ if prompt := st.chat_input("¿Cómo puedo ayudarte?"):
     insts = predict_class(prompt, st.session_state.model_path)
     res = get_response(insts, intents, st.session_state.model_path)
 
-    
+
     with st.chat_message("assistant"):
         st.markdown(res)
     st.session_state.messages.append({"role": "assistant", "content": res})
 
     # Actualizar modelo si es necesario
-    tag = next((item for item in intents["intents"] if item["tag"] == insts[0]['intent']), None)
-    if tag and "path" in tag:
-        st.session_state.model_path = tag["path"]
-        st.rerun()  # Forzar una recarga para actualizar las opciones
+    if model_path == "modelos/chatbot_model.h5":
+        tag = next((item for item in intents["intents"] if item["tag"] == insts[0]['intent']), None)
+        if tag and "path" in tag:
+            st.session_state.model_path = tag["path"]
+            st.rerun()  # Forzar una recarga para actualizar las opciones
+    else:
+        tag = next((sub for item in intents["intents"] if "sub_intents" in item for sub in item["sub_intents"] if sub.get("tag") == insts[0]['intent']), None)
+        if tag and "path" in tag:
+            st.session_state.model_path = tag["path"]
+            st.rerun()  # Forzar una recarga para actualizar las opciones
+
 
