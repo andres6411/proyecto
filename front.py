@@ -10,7 +10,7 @@ if "messages" not in st.session_state:
 if "first_message" not in st.session_state:
     st.session_state.first_message = True
 if "model_path" not in st.session_state:
-    st.session_state.model_path = "chatbot_model.h5"
+    st.session_state.model_path = "modelos/chatbot_model.h5"
 if "options" not in st.session_state:
     st.session_state.options = []
 
@@ -34,7 +34,7 @@ if st.session_state.first_message:
 def update_options():
     options = []
     model_path = st.session_state.model_path
-    if model_path == "chatbot_model.h5":
+    if model_path == "modelos/chatbot_model.h5":
         for intent in intents['intents']:
             options.append(intent["tag"])
     else:

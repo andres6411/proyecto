@@ -101,7 +101,7 @@ def train(words,classes,documents,ignore_words,model_name):
 
     print("model created",model_name)
 
-train(words,classes,documents,ignore_words,"chatbot_model.h5")
+train(words,classes,documents,ignore_words,"modelos/chatbot_model.h5")
 
 
 for intent in intents['intents']:
@@ -110,7 +110,7 @@ for intent in intents['intents']:
         classes = []
         documents = []
         ignore_words = ['?', '!']        
-        model_name=intent['tag']+"_model.h5"
+        model_name="modelos/"+intent['tag']+"_model.h5"
         for sub_intent in intent["sub_intents"]:
             for pattern in sub_intent['patterns']:
                 # Tokeniza las palabras en cada patrón y las agrega a la lista de palabras

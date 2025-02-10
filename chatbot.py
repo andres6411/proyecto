@@ -5,6 +5,7 @@ import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
+random.seed(10)
 
 lemmatizer = WordNetLemmatizer() # Create an instance of the WordNetLemmatizer class
 intents = json.loads(open('intents_spanish.json', 'r', encoding='utf-8').read())
@@ -51,7 +52,7 @@ def get_response(intents_list, intents_json,model_path):
     tag = intents_list[0]['intent'] # Get the tag of the intent
     list_of_intents = intents_json['intents'] # Get the list of intents
     print("\n\n\n\n\n   \n\n\n\n\n",model_path,"\n\n\n\n\n  \n\n\n\n\n")
-    if model_path=="chatbot_model.h5":
+    if model_path=="modelos/chatbot_model.h5":
         for i in list_of_intents: # Loop through the list of intents
             if i['tag'] == tag: # If the tag is equal to the tag of the intent
                 print(i)
@@ -60,9 +61,16 @@ def get_response(intents_list, intents_json,model_path):
     else:
         print("\n\n\n\n\n  sub intents  \n\n\n\n\n")
         clase=(model_path.split('_'))
+        print("primera versión de clase:                      ",clase)
         clase.pop()
+        print("segunda versión de clase:                      ",clase)
         clase="".join(clase)
+        clase=(clase.split('/'))
+        clase.pop(0)
+        clase="".join(clase)
+        print("clase:                         ",clase)
         for i in list_of_intents: # Loop through the list of intents
+            print(i)
             if i['tag'] == clase:
                 print(clase)
                 print("\n\n\n\n\n  pasa  \n\n\n\n\n")

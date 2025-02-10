@@ -30,7 +30,7 @@
                 "¡Un gusto saludarte! ¿Cómo puedo ayudarte el día de hoy?",
                 "¡Hey! ¿En qué necesitas apoyo?"
             ],
-            "path":"chatbot_model.h5"
+            "path":"modelos/chatbot_model.h5"
         },
         {
             "tag": "problema conexion",
@@ -168,7 +168,7 @@
                         "Por favor, detállame el inconveniente y veremos cómo solucionarlo.",
                         "Intentemos resolverlo juntos. Explícame qué sucede."
                     ],
-                    "path":"chatbot_model.h5"
+                    "path":"modelos/chatbot_model.h5"
                 },
                 {
                     "tag": "Hablar con un asesor",
@@ -207,7 +207,7 @@
                     ]
                 }
             ],
-            "path":"problema conexion_model.h5"
+            "path":"modelos/problema conexion_model.h5"
         },
         {
             "tag": "problemas con telefonia",
@@ -344,7 +344,7 @@
                         "Por favor, detállame el inconveniente y con gusto te asistiré.",
                         "Estoy aquí para ayudarte. Cuéntame un poco más sobre el problema que estás enfrentando con las llamadas."
                     ],
-                    "path":"chatbot_model.h5"
+                    "path":"modelos/chatbot_model.h5"
                 },
                 {
                     "tag": "Hablar con un asesor",
@@ -383,7 +383,7 @@
                     ]
                 }
             ],
-            "path":"problemas con telefonia_model.h5"
+            "path":"modelos/problemas con telefonia_model.h5"
         },
         {
             "tag": "problemas con television",
@@ -520,7 +520,7 @@
                         "Por favor, detállame el inconveniente y estaré encantado de asistirte.",
                         "Dime qué sucede exactamente con la televisión y te proporcionaré la mejor solución."
                     ],
-                    "path":"chatbot_model.h5"
+                    "path":"modelos/chatbot_model.h5"
                 },
                 {
                     "tag": "Hablar con un asesor",
@@ -557,7 +557,7 @@
                     ]
                 }
             ],
-            "path": "problemas con television_model.h5"
+            "path": "modelos/problemas con television_model.h5"
         },
         {
             "tag": "facturacion",
@@ -692,7 +692,7 @@
                         "Estamos aquí para ayudarte. Cuéntanos más sobre tu situación.",
                         "No te preocupes, investigaremos cómo resolverlo."
                     ],
-                    "path":"chatbot_model.h5"
+                    "path":"modelos/chatbot_model.h5"
                 },
                 {
                     "tag": "hablar con un asesor",
@@ -731,7 +731,7 @@
                     ]
                 }
             ],
-            "path": "facturacion_model.h5"
+            "path": "modelos/facturacion_model.h5"
         },
         {
             "tag": "Planes y Servicios",
@@ -867,7 +867,7 @@
                         "Contáctanos directamente para explicarnos tu problema y ofrecerte la mejor solución.",
                         "Si necesitas ayuda personalizada, estamos disponibles para atenderte."
                     ],
-                    "path":"chatbot_model.h5"
+                    "path":"modelos/chatbot_model.h5"
                 },
                 {
                     "tag": "hablar con un asesor",
@@ -1105,7 +1105,7 @@
                         "Cuéntanos los detalles de tu problema para encontrar una solución adecuada.",
                         "Explícanos tu situación para que podamos ofrecerte asistencia personalizada."
                     ],
-                    "path":"chatbot_model.h5"
+                    "path":"modelos/chatbot_model.h5"
                 },
                 {
                     "tag": "hablar con un asesor",
@@ -1164,7 +1164,7 @@
                     ]
                 }
             ],
-            "path": "Planes y Servicios_model.h5"
+            "path": "modelos/Planes y Servicios_model.h5"
         },
         {
             "tag": "despedida",
